@@ -1,0 +1,10 @@
+# Ignore Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+*/.venv/
+
+# Ignore specific dataset files
+datasets/job_descriptions.csv
