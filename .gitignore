@@ -12,3 +12,7 @@ wheels/
 
 # Datasets
 datasets/
+
+# Parsed resumes
+parsed_resumes/
+
