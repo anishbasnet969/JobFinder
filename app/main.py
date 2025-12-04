@@ -1,9 +1,14 @@
 import logging
 from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
-from app.config import settings, configure_logging
+from fastapi.responses import HTMLResponse
+
+from app.api.routes import jobs, recommendations
+from app.config import configure_logging, settings
+from app.core.cache import cache_manager
+from app.core.startup import trigger_job_ingestion
 from app.database import engine
 
 configure_logging()
@@ -14,9 +19,13 @@ logger = logging.getLogger(__name__)
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Starting up...")
+    if settings.JOB_INGEST_ON_STARTUP:
+        await trigger_job_ingestion()
+
     yield
 
     logger.info("Shutting down...")
+    await cache_manager.close()
     await engine.dispose()
 
 
@@ -34,6 +43,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Include routers
+app.include_router(recommendations.router)
+app.include_router(jobs.router)
 
 
 @app.get("/")

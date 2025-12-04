@@ -16,3 +16,5 @@ datasets/
 # Parsed resumes
 parsed_resumes/
 
+# Parsed job listings
+parsed_jobs/

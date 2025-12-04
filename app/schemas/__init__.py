@@ -1,39 +1,7 @@
 from .base import CustomBaseModel
-from .resume import (
-    Resume,
-    Basics,
-    Location,
-    Profile,
-    WorkItem,
-    VolunteerItem,
-    EducationItem,
-    Skill,
-    Language,
-    Interest,
-    Award,
-    Certificate,
-    Publication,
-    Project,
-    Reference,
-    Iso8601,
-)
+from .common import Iso8601
 
 __all__ = [
     "CustomBaseModel",
-    "Resume",
-    "Basics",
-    "Location",
-    "Profile",
-    "WorkItem",
-    "VolunteerItem",
-    "EducationItem",
-    "Skill",
-    "Language",
-    "Interest",
-    "Award",
-    "Certificate",
-    "Publication",
-    "Project",
-    "Reference",
     "Iso8601",
 ]

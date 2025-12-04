@@ -19,3 +19,18 @@ def extract_text_from_pdf(file_path: str) -> Optional[str]:
     except Exception as e:
         print(f"Error extracting text from {file_path}: {e}")
         return None
+
+
+async def extract_text_from_pdf_async(file_path: str) -> Optional[str]:
+    """
+    Asynchronously extract text from a PDF file using a thread pool.
+
+    Args:
+        file_path: Absolute path to the PDF file.
+
+    Returns:
+        Extracted text as a string, or None if extraction fails.
+    """
+    import asyncio
+
+    return await asyncio.to_thread(extract_text_from_pdf, file_path)

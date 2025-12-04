@@ -3,11 +3,19 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
 from app.schemas.resume import Resume
 from app.config import settings
+from app.core import generate_hash
+from app.core.cache import cache_manager
+import logging
+
+logger = logging.getLogger(__name__)
 
 
-def extract_resume_data(text: str) -> Resume:
+async def extract_resume_data(text: str) -> Resume:
     """
     Extracts structured resume data from text using Gemini.
+
+    Uses caching to avoid re-parsing identical resume text.
+    Cache key is based on hash of the resume text.
 
     Args:
         text: The text content of the resume.
@@ -15,6 +23,18 @@ def extract_resume_data(text: str) -> Resume:
     Returns:
         A Resume object containing the extracted data.
     """
+    # Generate cache key from text hash
+    text_hash = generate_hash(text)
+    cache_key = f"resume_parsed:{text_hash}"
+
+    # Try to get from cache
+    cached_result = await cache_manager.get(cache_key)
+    if cached_result is not None:
+        logger.info(f"Resume parsing cache HIT for hash {text_hash[:8]}")
+        return cached_result
+
+    logger.info(f"Resume parsing cache MISS for hash {text_hash[:8]}")
+
     if not settings.GOOGLE_API_KEY:
         raise ValueError("GOOGLE_API_KEY environment variable not set")
 
@@ -45,10 +65,15 @@ def extract_resume_data(text: str) -> Resume:
     chain = prompt | llm | parser
 
     try:
-        result = chain.invoke(
+        result = await chain.ainvoke(
             {"text": text, "format_instructions": parser.get_format_instructions()}
         )
+
+        # Cache the result for 24 hours
+        await cache_manager.set(cache_key, result, ttl=settings.CACHE_RESUME_TTL)
+        logger.info("Resume parsed and cached")
+
         return result
     except Exception as e:
-        print(f"Error extracting data with LLM: {e}")
+        logger.error(f"Error extracting data with LLM: {e}")
         raise e
