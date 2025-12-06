@@ -97,37 +97,64 @@ def calculate_skills_match(
 
     # Extract resume skills (skill names + keywords)
     resume_skill_set = set()
+    resume_skill_list = []
     if resume.skills:
         for skill in resume.skills:
             if skill.name:
                 resume_skill_set.add(skill.name.lower())
+                resume_skill_list.append(skill.name.lower())
             if skill.keywords:
-                resume_skill_set.update([k.lower() for k in skill.keywords])
+                for k in skill.keywords:
+                    resume_skill_set.add(k.lower())
+                    resume_skill_list.append(k.lower())
 
     # Extract job skills (skill names + keywords)
-    job_skill_names = []
+    job_skill_list = []
     job_skill_set = set()
     for skill_dict in job_skills:
         if isinstance(skill_dict, dict):
             if skill_dict.get("name"):
                 name = skill_dict["name"].lower()
-                job_skill_names.append(skill_dict["name"])
+                job_skill_list.append(skill_dict["name"])
                 job_skill_set.add(name)
             if skill_dict.get("keywords"):
                 job_skill_set.update([k.lower() for k in skill_dict["keywords"]])
+                job_skill_list.extend(skill_dict["keywords"])
 
     if not job_skill_set:
         return 0.0, [], []
 
-    # Calculate matches
-    matched = resume_skill_set.intersection(job_skill_set)
-    matched_skills = [s for s in job_skill_names if s.lower() in matched]
+    # Calculate matches - both exact and partial
+    matched = set()
+    partial_matched = set()
 
-    missing = job_skill_set - resume_skill_set
-    missing_skills = list(missing)
+    for job_skill in job_skill_list:
+        # Exact match
+        if job_skill in resume_skill_set:
+            matched.add(job_skill)
+        else:
+            # Partial match - check if job skill is substring of resume skill or vice versa
+            for resume_skill in resume_skill_list:
+                # Match variations like "react" in "react.js" or "python" in "python3"
+                if (job_skill in resume_skill or resume_skill in job_skill) and len(
+                    job_skill
+                ) >= 3:
+                    partial_matched.add(job_skill)
+                    break
+
+    # Combine exact and partial matches (partial matches count as 0.7 of a match)
+    total_matches = len(matched) + (len(partial_matched) * 0.7)
+
+    # Get matched skill names for reporting
+    all_matched = matched.union(partial_matched)
+    matched_skills = [s for s in job_skill_list if s.lower() in all_matched]
+
+    # Calculate missing skills
+    missing = job_skill_set - matched - partial_matched
+    missing_skills = list(missing)[:10]  # Limit to top 10 missing skills
 
     # Score: ratio of matched skills to required skills
-    score = len(matched) / len(job_skill_set) if job_skill_set else 0.0
+    score = total_matches / len(job_skill_set) if job_skill_set else 0.0
 
     return min(score, 1.0), matched_skills, missing_skills
 
@@ -136,21 +163,31 @@ def calculate_experience_match(
     resume: Resume,
     job_experience: Optional[str],
     job_qualifications: Optional[List[str]],
+    min_experience_years: Optional[int] = None,
+    max_experience_years: Optional[int] = None,
+    experience_level: Optional[str] = None,
 ) -> float:
     """
     Calculate experience match score.
 
     Args:
         resume: Resume object
-        job_experience: Experience level from job (Entry-level, Mid-level, Senior, etc.)
-        job_qualifications: Optional list of qualification strings which may contain
-            experience requirements (e.g., "3+ years of experience in web development").
+        job_experience: Raw experience text from job (e.g., "5 to 15 Years")
+        job_qualifications: Optional list of qualification strings
+        min_experience_years: Pre-parsed minimum years required
+        max_experience_years: Pre-parsed maximum years (for overqualification check)
+        experience_level: Pre-parsed level (Entry-level, Mid-level, Senior, Lead, Principal)
 
     Returns:
         Score between 0.0 and 1.0
     """
     # Return neutral score if no experience requirements provided
-    if not job_experience and not job_qualifications:
+    if (
+        not job_experience
+        and not job_qualifications
+        and min_experience_years is None
+        and experience_level is None
+    ):
         return 0.5
 
     # Calculate total months of experience from resume
@@ -176,76 +213,88 @@ def calculate_experience_match(
     # Convert total months to years (as a float for precision)
     resume_years = total_months / 12.0
 
-    # Parse job experience requirement from experience field
-    job_years_required = 0
+    # Parse job experience requirement
+    job_min_years = 0
+    job_max_years = None
     found_numeric = False
 
-    # Check experience field first for numerical values
-    if job_experience:
-        experience_text = job_experience.lower()
-        year_match = re.search(
-            r"(\d+)[\+\-]?\s*(?:to)?\s*(\d+)?\s*years?", experience_text
-        )
-        if year_match:
-            job_years_required = int(year_match.group(1))
-            found_numeric = True
+    # Use pre-parsed min/max years if available
+    if min_experience_years is not None:
+        job_min_years = min_experience_years
+        found_numeric = True
+    if max_experience_years is not None:
+        job_max_years = max_experience_years
 
-    # If no numeric value found in experience, check qualifications
+    # Fallback: Check experience field for numerical values
+    if not found_numeric and job_experience:
+        experience_text = job_experience.lower()
+        year_match = re.search(r"(\d+)\s*(?:to|\-)\s*(\d+)\s*years?", experience_text)
+        if year_match:
+            job_min_years = int(year_match.group(1))
+            job_max_years = int(year_match.group(2))
+            found_numeric = True
+        else:
+            # Try single number pattern
+            single_match = re.search(r"(\d+)\+?\s*years?", experience_text)
+            if single_match:
+                job_min_years = int(single_match.group(1))
+                found_numeric = True
+
+    # If no numeric value found, check qualifications
     if not found_numeric and job_qualifications:
         qual_text = " ".join(job_qualifications).lower()
-        year_match = re.search(r"(\d+)[\+\-]?\s*(?:to)?\s*(\d+)?\s*years?", qual_text)
+        year_match = re.search(r"(\d+)\s*(?:to|\-)\s*(\d+)\s*years?", qual_text)
         if year_match:
-            job_years_required = int(year_match.group(1))
+            job_min_years = int(year_match.group(1))
+            job_max_years = int(year_match.group(2))
             found_numeric = True
+        else:
+            single_match = re.search(r"(\d+)\+?\s*years?", qual_text)
+            if single_match:
+                job_min_years = int(single_match.group(1))
+                found_numeric = True
 
-    # If still no numeric value, check for experience levels
+    # If still no numeric value, use experience_level or detect from text
     if not found_numeric:
-        # Check experience field for levels
-        if job_experience:
-            experience_text = job_experience.lower()
-            if (
-                "entry" in experience_text
-                or "junior" in experience_text
-                or "beginner" in experience_text
-            ):
-                job_years_required = 0
-            elif "mid" in experience_text or "intermediate" in experience_text:
-                job_years_required = 3
-            elif "senior" in experience_text or "lead" in experience_text:
-                job_years_required = 5
-            elif (
-                "principal" in experience_text
-                or "staff" in experience_text
-                or "expert" in experience_text
-            ):
-                job_years_required = 8
+        level = experience_level.lower() if experience_level else ""
+        if not level and job_experience:
+            level = job_experience.lower()
 
-        # If experience field didn't provide level info, check qualifications
-        if job_years_required == 0 and job_qualifications:
-            qual_text = " ".join(job_qualifications).lower()
-
-            if "entry" in qual_text or "junior" in qual_text or "beginner" in qual_text:
-                job_years_required = 0
-            elif "mid" in qual_text or "intermediate" in qual_text:
-                job_years_required = 3
-            elif "senior" in qual_text or "lead" in qual_text:
-                job_years_required = 5
-            elif "principal" in qual_text or "staff" in qual_text:
-                job_years_required = 8
+        if "entry" in level or "junior" in level or "beginner" in level:
+            job_min_years = 0
+            job_max_years = 2
+        elif "mid" in level or "intermediate" in level:
+            job_min_years = 3
+            job_max_years = 5
+        elif "senior" in level:
+            job_min_years = 5
+            job_max_years = 8
+        elif "lead" in level:
+            job_min_years = 8
+            job_max_years = 12
+        elif "principal" in level or "staff" in level or "expert" in level:
+            job_min_years = 10
+            job_max_years = None  # No upper limit
 
     # Calculate score based on how well resume experience matches requirement
-    if resume_years >= job_years_required:
-        # Has enough experience
-        if resume_years <= job_years_required + 3:
-            score = 1.0  # Perfect match
+    if resume_years >= job_min_years:
+        if job_max_years is not None and resume_years > job_max_years:
+            # Overqualified - apply slight penalty based on how much over
+            excess_years = resume_years - job_max_years
+            if excess_years <= 3:
+                score = 0.9  # Slightly overqualified
+            elif excess_years <= 6:
+                score = 0.8  # Moderately overqualified
+            else:
+                score = 0.7  # Significantly overqualified
         else:
-            score = 0.9  # Overqualified slightly
+            score = 1.0  # Perfect fit within range
     else:
-        # Doesn't have enough experience - penalize proportionally
-        if job_years_required > 0:
-            score = resume_years / job_years_required
+        # Underqualified - penalize proportionally
+        if job_min_years > 0:
+            score = resume_years / job_min_years
         else:
-            score = 1.0  # No requirement
+            score = 1.0  # No minimum requirement
 
     return min(score, 1.0)
 
@@ -285,20 +334,39 @@ def calculate_education_match(
         if edu.area:
             resume_fields.add(edu.area.lower())
 
-    # Degree level hierarchy
+    # Degree level hierarchy - expanded to include common abbreviations
     degree_levels = {
+        # Level 4 - Doctorate
         "phd": 4,
         "doctorate": 4,
+        "doctoral": 4,
+        # Level 3 - Master's
         "master": 3,
         "msc": 3,
+        "ms": 3,
         "mba": 3,
+        "m.tech": 3,
+        "mtech": 3,
+        "mca": 3,
+        "m.e.": 3,
+        "m.s.": 3,
+        # Level 2 - Bachelor's
         "bachelor": 2,
         "bsc": 2,
         "bs": 2,
         "ba": 2,
+        "b.tech": 2,
+        "btech": 2,
+        "bca": 2,
+        "b.e.": 2,
+        "b.s.": 2,
+        "undergraduate": 2,
+        # Level 1 - Associate
         "associate": 1,
+        # Level 0 - High School / Diploma
         "high school": 0,
         "diploma": 0,
+        "ged": 0,
     }
 
     # Get highest degree level from resume
@@ -522,7 +590,12 @@ def _calculate_job_score(
         resume, job.skills
     )
     experience_score = calculate_experience_match(
-        resume, job.experience, job.qualifications
+        resume,
+        job.experience,
+        job.qualifications,
+        min_experience_years=getattr(job, "min_experience_years", None),
+        max_experience_years=getattr(job, "max_experience_years", None),
+        experience_level=getattr(job, "experience_level", None),
     )
     education_score = calculate_education_match(
         resume, job.education, job.qualifications
@@ -577,7 +650,7 @@ async def get_recommendations_for_resume(
         RecommendationResponse with ranked job matches
     """
     # Generate cache key from resume + top_k
-    resume_dict = resume.model_dump()
+    resume_dict = resume.model_dump(mode="json")
     cache_key_data = json.dumps(resume_dict, sort_keys=True) + f":top_k={top_k}"
     cache_key_hash = hashlib.sha256(cache_key_data.encode()).hexdigest()[:16]
     cache_key = f"recommendations:{cache_key_hash}"

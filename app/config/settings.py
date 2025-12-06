@@ -79,7 +79,7 @@ class Settings(BaseSettings):
         description="Trigger CSV job ingestion automatically when the API starts",
     )
     JOB_INGEST_CSV_PATH: str = Field(
-        default="datasets/Job/job_title_des.csv",
+        default="datasets/Job/job_title_descriptions.csv",
         description="Relative or absolute path to the job CSV",
     )
     JOB_INGEST_BATCH_SIZE: int = Field(

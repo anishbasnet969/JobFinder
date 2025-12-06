@@ -65,7 +65,7 @@ async def _process_single_job(
             job_id=uuid.UUID(job_id) if isinstance(job_id, str) else job_id,
             title=parsed_job.title or job_title,
             company=parsed_job.company or job_data.get("company"),
-            type=parsed_job.type,
+            employment_type=parsed_job.employment_type,
             date=parsed_job.date,
             description=parsed_job.description or job_description,
             location=(
@@ -74,6 +74,9 @@ async def _process_single_job(
             remote=parsed_job.remote.value if parsed_job.remote else None,
             salary=parsed_job.salary,
             experience=parsed_job.experience,
+            min_experience_years=parsed_job.min_experience_years,
+            max_experience_years=parsed_job.max_experience_years,
+            experience_level=parsed_job.experience_level,
             responsibilities=parsed_job.responsibilities,
             qualifications=parsed_job.qualifications,
             skills=(
@@ -164,9 +167,8 @@ def ingest_jobs_from_csv_async(
         for idx, row in df.iterrows():
             job_data = {
                 "job_id": str(uuid.uuid4()),
-                "title": str(row.get("Job Title", "")),
-                "description": str(row.get("Job Description", "")),
-                "company": str(row.get("Company", "")) if "Company" in row else None,
+                "title": str(row.get("job_title", "")),
+                "description": str(row.get("job_description", "")),
             }
             jobs_data.append(job_data)
 

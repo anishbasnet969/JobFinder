@@ -2,12 +2,15 @@
 Service for parsing job descriptions using LLM.
 """
 
+import logging
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 
 from app.config import settings
 from app.schemas.job import JobDescriptionSchema
+
+logger = logging.getLogger(__name__)
 
 
 async def parse_job_description(job_title: str, job_text: str) -> JobDescriptionSchema:
@@ -16,7 +19,7 @@ async def parse_job_description(job_title: str, job_text: str) -> JobDescription
         raise ValueError("GOOGLE_API_KEY environment variable not set")
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-pro",
+        model="gemini-2.5-flash",
         temperature=0,
         google_api_key=settings.GOOGLE_API_KEY,
     )
@@ -35,15 +38,20 @@ async def parse_job_description(job_title: str, job_text: str) -> JobDescription
                 3. For skills: Create a structured list with name, level (if mentioned), and relevant keywords
                 4. For responsibilities: Extract as a list of distinct responsibility items
                 5. For qualifications: Extract education and experience requirements as a list
-                6. For type: Identify Full-time, Part-time, Contract, Internship, etc.
+                6. For employment_type: Identify Full-time, Part-time, Contract, Internship, etc.
                 7. For remote: Determine Remote, Hybrid, or On-site based on the description
-                8. For experience: Extract experience level (Entry-level, Mid-level, Senior) or years required
-                9. For salary: Extract salary information if mentioned
-                10. Use the provided job title if not clearly stated in description
-                11. Extract company name if mentioned
+                8. For experience: Store the raw experience text (e.g., "5 to 15 Years")
+                9. For min_experience_years: Extract MINIMUM years as integer (e.g., "5 to 15 Years" -> 5, "3+ years" -> 3)
+                10. For max_experience_years: Extract MAXIMUM years as integer (e.g., "5 to 15 Years" -> 15, "3+ years" -> null)
+                11. For experience_level: Determine level - Entry-level (0-2 yrs), Mid-level (3-5 yrs), Senior (5-8 yrs), Lead (8+ yrs), Principal (10+ yrs)
+                12. For salary: Extract salary information if mentioned
+                13. Use the provided job title if not clearly stated in description
+                14. Extract company name if mentioned
 
                 DO NOT infer information that isn't explicitly or implicitly stated in the text.
-                Return ONLY the JSON.""",
+                
+                IMPORTANT: Return ONLY valid JSON. Do not include markdown code blocks, backticks, or any other formatting.
+                Return ONLY the raw JSON object.""",
             ),
             (
                 "user",
@@ -64,5 +72,7 @@ async def parse_job_description(job_title: str, job_text: str) -> JobDescription
         )
         return result
     except Exception as e:
-        print(f"Error parsing job description with LLM: {e}")
+        logger.warning(
+            f"Error parsing job description with LLM: {e}. Using fallback schema."
+        )
         raise e
