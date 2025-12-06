@@ -11,6 +11,8 @@ from datetime import date
 from typing import List, Tuple, Dict, Optional
 from sqlalchemy import select, func, Float
 from sqlalchemy.ext.asyncio import AsyncSession
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_core.prompts import ChatPromptTemplate
 from app.config import settings
 from app.core.cache import cache_manager
 from app.models.job import Job
@@ -473,74 +475,147 @@ def _calculate_similarity_from_distance(distance: Optional[float]) -> float:
     return max(0.0, min(1.0 - (distance / 2.0), 1.0))
 
 
-def generate_explanation(
+async def generate_explanation(
     matching_factors: MatchingFactors,
     matched_skills: List[str],
+    missing_skills: List[str],
     resume: Resume,
-    job_title: Optional[str],
+    job: Job,
 ) -> str:
     """
-    Generate human-readable explanation for the match.
+    Generate human-readable explanation for the match using LLM.
 
     Args:
         matching_factors: Breakdown of matching scores
         matched_skills: List of matched skills
+        missing_skills: List of missing skills
         resume: Resume object
-        job_title: Job title
-        job_experience: Job experience requirement
+        job: Job model instance
 
     Returns:
         Explanation string
     """
-    explanations = []
+    if not settings.GOOGLE_API_KEY:
+        logger.warning("GOOGLE_API_KEY not set")
+        return "May be a potential match worth considering."
 
-    # Determine strongest factor
-    factors = {
-        "skills": matching_factors.skills_match,
-        "experience": matching_factors.experience_match,
-        "education": matching_factors.education_match,
-        "semantic": matching_factors.semantic_similarity,
-    }
-    strongest_factor = max(factors, key=factors.get)
+    try:
+        llm = ChatGoogleGenerativeAI(
+            model="gemini-2.5-flash-lite",
+            temperature=0,
+            google_api_key=settings.GOOGLE_API_KEY,
+        )
 
-    # Skills explanation
-    if matching_factors.skills_match > 0.7:
-        if matched_skills:
-            skill_list = ", ".join(matched_skills)
-            explanations.append(f"Strong skills match including {skill_list}")
-    elif matching_factors.skills_match > 0.4:
-        explanations.append("Moderate skills alignment")
+        # Build resume summary
+        resume_summary_parts = []
+        if resume.basics and resume.basics.name:
+            resume_summary_parts.append(f"Name: {resume.basics.name}")
+        if resume.basics and resume.basics.label:
+            resume_summary_parts.append(f"Current Role: {resume.basics.label}")
+        if resume.work:
+            recent_work = resume.work[0] if resume.work else None
+            if recent_work:
+                work_info = f"Recent Experience: {recent_work.position or 'N/A'} at {recent_work.name or 'N/A'}"
+                resume_summary_parts.append(work_info)
+        if resume.skills:
+            skill_names = [s.name for s in resume.skills if s.name][:10]
+            if skill_names:
+                resume_summary_parts.append(f"Key Skills: {', '.join(skill_names)}")
+        if resume.education:
+            edu = resume.education[0] if resume.education else None
+            if edu:
+                edu_info = f"Education: {edu.study_type or ''} in {edu.area or 'N/A'} from {edu.institution or 'N/A'}"
+                resume_summary_parts.append(edu_info)
 
-    # Experience explanation
-    if matching_factors.experience_match > 0.8:
-        if resume.work and len(resume.work) > 0:
-            years = len(resume.work) * 2  # Rough estimate
-            explanations.append(f"Relevant experience (approximately {years} years)")
+        resume_summary = "\n".join(resume_summary_parts)
 
-    # Education explanation
-    if matching_factors.education_match > 0.7:
-        if resume.education and len(resume.education) > 0:
-            explanations.append("Educational background aligns well")
+        # Build job summary
+        job_summary_parts = [f"Job Title: {job.title or 'N/A'}"]
+        if job.company:
+            job_summary_parts.append(f"Company: {job.company}")
+        if job.experience:
+            job_summary_parts.append(f"Experience Required: {job.experience}")
+        if job.skills:
+            job_skill_names = []
+            for s in job.skills[:10]:
+                if isinstance(s, dict) and s.get("name"):
+                    job_skill_names.append(s["name"])
+            if job_skill_names:
+                job_summary_parts.append(
+                    f"Required Skills: {', '.join(job_skill_names)}"
+                )
 
-    # Semantic explanation
-    if matching_factors.semantic_similarity > 0.7:
-        explanations.append("Overall profile matches job requirements")
+        job_summary = "\n".join(job_summary_parts)
 
-    # Combine explanations
-    if not explanations:
-        return "May be a potential match worth considering"
+        # Build match context
+        matched_skills_str = (
+            ", ".join(matched_skills) if matched_skills else "None identified"
+        )
+        missing_skills_str = (
+            ", ".join(missing_skills[:5]) if missing_skills else "None identified"
+        )
 
-    explanation = ". ".join(explanations) + "."
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    """You are an expert job matching system generating explanations based on scoring factors.
+                    
+                    The recommendation engine evaluates candidates using three key factors:
+                    1. Skills Match - How well the candidate's technical and professional skills align with job requirements
+                    2. Experience Match - How the candidate's work history and years of experience meet the role's requirements
+                    3. Education Match - How the candidate's educational qualifications fit the job's requirements
+                    
+                    Additionally, an Overall Fit score indicates general profile alignment.
+                    
+                    Generate a brief explanation (2-3 sentences) that specifically addresses the three key factors.
+                    Mention how each factor contributes to the match, highlighting stronger areas.
+                    If matched skills are provided, reference specific skills that align.
+                    Write in third person, referring to "the candidate" or "this candidate".
+                    Be objective and factual.
+                    
+                    IMPORTANT: Do not use bullet points or lists. Return ONLY the explanation text.""",
+                ),
+                (
+                    "user",
+                    """Candidate Profile:
+                {resume_summary}
 
-    # Add summary based on strongest factor
-    if strongest_factor == "skills":
-        explanation = "Strong match based on technical skills. " + explanation
-    elif strongest_factor == "experience":
-        explanation = "Good match based on experience level. " + explanation
-    elif strongest_factor == "semantic":
-        explanation = "Excellent overall fit for this role. " + explanation
+                Job Opportunity:
+                {job_summary}
 
-    return explanation
+                Scoring Factors:
+                - Skills Match: {skills_match}
+                - Experience Match: {experience_match}
+                - Education Match: {education_match}
+                - Overall Fit: {overall_fit}
+
+                Matched Skills: {matched_skills}
+                Skills Gap: {missing_skills}""",
+                ),
+            ]
+        )
+
+        chain = prompt | llm
+
+        result = await chain.ainvoke(
+            {
+                "resume_summary": resume_summary,
+                "job_summary": job_summary,
+                "skills_match": f"{matching_factors.skills_match:.0%}",
+                "experience_match": f"{matching_factors.experience_match:.0%}",
+                "education_match": f"{matching_factors.education_match:.0%}",
+                "overall_fit": f"{matching_factors.semantic_similarity:.0%}",
+                "matched_skills": matched_skills_str,
+                "missing_skills": missing_skills_str,
+            }
+        )
+
+        return result.content.strip()
+
+    except Exception as e:
+        logger.warning(f"Error generating LLM explanation: {e}")
+        return "May be a potential match worth considering."
 
 
 def _calculate_job_score(
@@ -590,10 +665,6 @@ def _calculate_job_score(
         semantic_similarity=semantic_score,
     )
 
-    explanation = generate_explanation(
-        matching_factors, matched_skills, resume, job.title
-    )
-
     return JobRecommendation(
         job_id=str(job.job_id),
         job_title=job.title,
@@ -602,7 +673,7 @@ def _calculate_job_score(
         matching_factors=matching_factors,
         matched_skills=matched_skills,
         missing_skills=missing_skills,
-        explanation=explanation,
+        explanation="",  # Will be generated in batch
     )
 
 
@@ -675,11 +746,16 @@ async def get_recommendations_for_resume(
 
     logger.info(f"Pre-filtered to {len(rows)} candidates for detailed scoring")
 
+    # Build a map of job_id to Job for explanation generation
+    jobs_map: Dict[str, Job] = {}
+
     # 3. Calculate detailed scores only for pre-filtered candidates
     job_scores = []
     for row in rows:
         job = row[0]
         distance = row[1]
+
+        jobs_map[str(job.job_id)] = job
 
         semantic_score = 0.0
         if resume_embedding:
@@ -693,6 +769,24 @@ async def get_recommendations_for_resume(
 
     # Return top K recommendations
     recommendations = job_scores[:top_k]
+
+    # 4. Generate LLM explanations for top recommendations in batch
+    if settings.GOOGLE_API_KEY:
+
+        async def generate_single_explanation(rec: JobRecommendation) -> None:
+            job = jobs_map.get(rec.job_id)
+            if job:
+                rec.explanation = await generate_explanation(
+                    rec.matching_factors,
+                    rec.matched_skills,
+                    rec.missing_skills,
+                    resume,
+                    job,
+                )
+
+        await asyncio.gather(
+            *[generate_single_explanation(rec) for rec in recommendations]
+        )
 
     # Extract candidate info
     candidate_id = "resume_" + (
