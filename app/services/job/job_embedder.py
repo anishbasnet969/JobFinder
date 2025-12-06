@@ -3,11 +3,14 @@ Service for generating embeddings for job descriptions.
 """
 
 import asyncio
+import logging
 from typing import List
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from app.config import settings
 from app.schemas.job import JobDescriptionSchema
 from app.core.cache import cache_result
+
+logger = logging.getLogger(__name__)
 
 
 def generate_job_embedding(job: JobDescriptionSchema) -> List[float]:
@@ -166,7 +169,7 @@ async def generate_job_embedding_async(job: JobDescriptionSchema) -> List[float]
         embedding = await embeddings.aembed_query(combined_text)
         return embedding
     except Exception as e:
-        print(f"Error generating embedding: {e}")
+        logger.error(f"Error generating embedding: {e}")
         raise e
 
 
@@ -198,5 +201,5 @@ async def generate_resume_embedding_async(resume_text: str) -> List[float]:
         embedding = await embeddings.aembed_query(resume_text)
         return embedding
     except Exception as e:
-        print(f"Error generating resume embedding: {e}")
+        logger.error(f"Error generating resume embedding: {e}")
         raise e

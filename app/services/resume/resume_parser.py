@@ -1,3 +1,4 @@
+import time
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import PydanticOutputParser
@@ -5,6 +6,7 @@ from app.schemas.resume import Resume
 from app.config import settings
 from app.core import generate_hash
 from app.core.cache import cache_manager
+from app.core.metrics import metrics_tracker
 import logging
 
 logger = logging.getLogger(__name__)
@@ -23,6 +25,8 @@ async def extract_resume_data(text: str) -> Resume:
     Returns:
         A Resume object containing the extracted data.
     """
+    start_time = time.time()
+
     # Generate cache key from text hash
     text_hash = generate_hash(text)
     cache_key = f"resume_parsed:{text_hash}"
@@ -55,6 +59,7 @@ async def extract_resume_data(text: str) -> Resume:
                 2. For certificates/courses: Only fill the 'issuer' field if it is explicitly mentioned for that specific certificate. If no issuer is mentioned for a certificate, leave it as null. DO NOT copy the issuer from other certificates.
                 3. Do NOT infer the issuer. For example, if the certificate is "Data Science", do NOT assume it is from "Coursera". Only use the issuer if it is explicitly stated in the text next to the certificate.
                 4. Extract all data accurately from the text provided.
+                5. For dates: Use ISO 8601 format (YYYY, YYYY-MM, or YYYY-MM-DD). For current/ongoing positions where end_date is "Present" or similar, set end_date to null.
 
                 Return ONLY the JSON.""",
             ),
@@ -71,7 +76,12 @@ async def extract_resume_data(text: str) -> Resume:
 
         # Cache the result for 24 hours
         await cache_manager.set(cache_key, result, ttl=settings.CACHE_RESUME_TTL)
-        logger.info("Resume parsed and cached")
+
+        # Record timing metric
+        duration_ms = (time.time() - start_time) * 1000
+        await metrics_tracker.record_timing("resume_parsing", duration_ms)
+
+        logger.info(f"Resume parsed and cached in {duration_ms:.2f}ms")
 
         return result
     except Exception as e:

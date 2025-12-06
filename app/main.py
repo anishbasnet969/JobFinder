@@ -5,9 +5,10 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import HTMLResponse
 
-from app.api.routes import jobs, recommendations
+from app.api.routes import jobs, recommendations, metrics
 from app.config import configure_logging, settings
 from app.core.cache import cache_manager
+from app.core.metrics import metrics_tracker
 from app.core.startup import trigger_job_ingestion
 from app.database import engine
 
@@ -26,6 +27,7 @@ async def lifespan(app: FastAPI):
 
     logger.info("Shutting down...")
     await cache_manager.close()
+    await metrics_tracker.close()
     await engine.dispose()
 
 
@@ -47,6 +49,7 @@ app.add_middleware(
 # Include routers
 app.include_router(recommendations.router)
 app.include_router(jobs.router)
+app.include_router(metrics.router)
 
 
 @app.get("/")

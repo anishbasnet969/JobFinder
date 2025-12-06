@@ -12,7 +12,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database import get_async_db
 from app.schemas.resume import Resume
-from app.schemas.job import RecommendationResponse
+from app.schemas.recommendation import RecommendationResponse
 from app.services.recommendation.recommendation_engine import (
     get_recommendations_for_resume,
 )

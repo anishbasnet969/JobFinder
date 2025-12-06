@@ -7,6 +7,7 @@ import hashlib
 import json
 import logging
 import re
+import time
 from datetime import date
 from typing import List, Tuple, Dict, Optional
 from sqlalchemy import select, func, Float
@@ -15,9 +16,10 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from app.config import settings
 from app.core.cache import cache_manager
+from app.core.metrics import metrics_tracker, TimingContext
 from app.models.job import Job
 from app.schemas.resume import Resume
-from app.schemas.job import (
+from app.schemas.recommendation import (
     JobRecommendation,
     RecommendationResponse,
     MatchingFactors,
@@ -694,6 +696,8 @@ async def get_recommendations_for_resume(
     Returns:
         RecommendationResponse with ranked job matches
     """
+    start_time = time.time()
+
     # Generate cache key from resume + top_k
     resume_dict = resume.model_dump(mode="json")
     cache_key_data = json.dumps(resume_dict, sort_keys=True) + f":top_k={top_k}"
@@ -738,8 +742,10 @@ async def get_recommendations_for_resume(
             pre_filter_limit
         )
 
-    result = await db.execute(query)
-    rows = result.all()  # Returns list of (Job, distance) tuples
+    # Track database query time
+    async with TimingContext("database_vector_search"):
+        result = await db.execute(query)
+        rows = result.all()  # Returns list of (Job, distance) tuples
 
     if not rows:
         raise ValueError("No jobs found in database")
@@ -805,6 +811,12 @@ async def get_recommendations_for_resume(
     # Cache the result
     await cache_manager.set(cache_key, response, ttl=settings.CACHE_RECOMMENDATIONS_TTL)
 
-    logger.info(f"Generated {len(recommendations)} recommendations")
+    # Record timing metric
+    duration_ms = (time.time() - start_time) * 1000
+    await metrics_tracker.record_timing("recommendation_generation", duration_ms)
+
+    logger.info(
+        f"Generated {len(recommendations)} recommendations in {duration_ms:.2f}ms"
+    )
 
     return response
