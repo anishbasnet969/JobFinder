@@ -97,64 +97,38 @@ def calculate_skills_match(
 
     # Extract resume skills (skill names + keywords)
     resume_skill_set = set()
-    resume_skill_list = []
     if resume.skills:
         for skill in resume.skills:
             if skill.name:
                 resume_skill_set.add(skill.name.lower())
-                resume_skill_list.append(skill.name.lower())
             if skill.keywords:
-                for k in skill.keywords:
-                    resume_skill_set.add(k.lower())
-                    resume_skill_list.append(k.lower())
+                resume_skill_set.update(k.lower() for k in skill.keywords)
 
     # Extract job skills (skill names + keywords)
-    job_skill_list = []
+    job_skill_names = []  # Original casing for reporting
     job_skill_set = set()
     for skill_dict in job_skills:
         if isinstance(skill_dict, dict):
             if skill_dict.get("name"):
-                name = skill_dict["name"].lower()
-                job_skill_list.append(skill_dict["name"])
-                job_skill_set.add(name)
+                job_skill_names.append(skill_dict["name"])
+                job_skill_set.add(skill_dict["name"].lower())
             if skill_dict.get("keywords"):
-                job_skill_set.update([k.lower() for k in skill_dict["keywords"]])
-                job_skill_list.extend(skill_dict["keywords"])
+                job_skill_names.extend(skill_dict["keywords"])
+                job_skill_set.update(k.lower() for k in skill_dict["keywords"])
 
     if not job_skill_set:
         return 0.0, [], []
 
-    # Calculate matches - both exact and partial
-    matched = set()
-    partial_matched = set()
-
-    for job_skill in job_skill_list:
-        # Exact match
-        if job_skill in resume_skill_set:
-            matched.add(job_skill)
-        else:
-            # Partial match - check if job skill is substring of resume skill or vice versa
-            for resume_skill in resume_skill_list:
-                # Match variations like "react" in "react.js" or "python" in "python3"
-                if (job_skill in resume_skill or resume_skill in job_skill) and len(
-                    job_skill
-                ) >= 3:
-                    partial_matched.add(job_skill)
-                    break
-
-    # Combine exact and partial matches (partial matches count as 0.7 of a match)
-    total_matches = len(matched) + (len(partial_matched) * 0.7)
-
-    # Get matched skill names for reporting
-    all_matched = matched.union(partial_matched)
-    matched_skills = [s for s in job_skill_list if s.lower() in all_matched]
+    # Calculate exact matches using set intersection
+    matched = resume_skill_set.intersection(job_skill_set)
+    matched_skills = [s for s in job_skill_names if s.lower() in matched]
 
     # Calculate missing skills
-    missing = job_skill_set - matched - partial_matched
+    missing = job_skill_set - matched
     missing_skills = list(missing)[:10]  # Limit to top 10 missing skills
 
     # Score: ratio of matched skills to required skills
-    score = total_matches / len(job_skill_set) if job_skill_set else 0.0
+    score = len(matched) / len(job_skill_set)
 
     return min(score, 1.0), matched_skills, missing_skills
 
