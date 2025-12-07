@@ -10,9 +10,6 @@ wheels/
 # Virtual environments
 .venv
 
-# Datasets
-datasets/
-
 # Parsed resumes
 parsed_resumes/
 

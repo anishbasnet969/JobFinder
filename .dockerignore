@@ -6,9 +6,6 @@ ENV/
 */venv/
 */.venv/
 
-# Ignore specific dataset files
-datasets/job_descriptions.csv
-
 # Parsed resumes
 parsed_resumes/
 
