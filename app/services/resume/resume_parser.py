@@ -59,7 +59,7 @@ async def extract_resume_data(text: str) -> Resume:
                 2. For certificates/courses: Only fill the 'issuer' field if it is explicitly mentioned for that specific certificate. If no issuer is mentioned for a certificate, leave it as null. DO NOT copy the issuer from other certificates.
                 3. Do NOT infer the issuer. For example, if the certificate is "Data Science", do NOT assume it is from "Coursera". Only use the issuer if it is explicitly stated in the text next to the certificate.
                 4. Extract all data accurately from the text provided.
-                5. For dates: Use ISO 8601 format (YYYY, YYYY-MM, or YYYY-MM-DD). For current/ongoing positions where end_date is "Present" or similar, set end_date to null.
+                5. For dates: Use ISO 8601 format (YYYY, YYYY-MM, or YYYY-MM-DD). For current/ongoing positions where end_date is "Present" or similar, set `end_date` to "2025-12" (December 2025) instead of null. If a more precise date is present in the text, prefer YYYY-MM-DD.
 
                 Return ONLY the JSON.""",
             ),
