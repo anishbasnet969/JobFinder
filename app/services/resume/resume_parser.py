@@ -43,7 +43,7 @@ async def extract_resume_data(text: str) -> Resume:
         raise ValueError("GOOGLE_API_KEY environment variable not set")
 
     llm = ChatGoogleGenerativeAI(
-        model="gemini-2.5-flash", temperature=0, google_api_key=settings.GOOGLE_API_KEY
+        model="gemini-2.5-pro", temperature=0, google_api_key=settings.GOOGLE_API_KEY
     )
 
     parser = PydanticOutputParser(pydantic_object=Resume)

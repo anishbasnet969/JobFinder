@@ -29,6 +29,10 @@ class Settings(BaseSettings):
         default="gemini-embedding-001", description="Gemini embedding model"
     )
 
+    COHERE_API_KEY: Optional[str] = Field(
+        default=None, description="Cohere API key for reranking"
+    )
+
     # Redis Configuration
     REDIS_HOST: str = Field(default="localhost", description="Redis host")
     REDIS_PORT: int = Field(default=6379, description="Redis port")
@@ -66,6 +70,20 @@ class Settings(BaseSettings):
     VECTOR_SEARCH_CANDIDATES: int = Field(
         default=100,
         description="Number of candidates to pre-filter in vector search",
+    )
+
+    # Reranking Settings
+    RERANKING_ENABLED: bool = Field(
+        default=True,
+        description="Enable LLM-based reranking of vector search results",
+    )
+    RERANKING_INPUT_CANDIDATES: int = Field(
+        default=50,
+        description="Number of vector search candidates to send to LLM reranker",
+    )
+    RERANKING_OUTPUT_CANDIDATES: int = Field(
+        default=25,
+        description="Number of candidates to keep after LLM reranking for detailed scoring",
     )
 
     # Worker Settings

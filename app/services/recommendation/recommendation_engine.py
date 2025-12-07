@@ -25,6 +25,7 @@ from app.schemas.recommendation import (
     MatchingFactors,
 )
 from app.services.job.job_embedder import generate_resume_embedding_async
+from app.services.recommendation.reranker import rerank_candidates
 
 logger = logging.getLogger(__name__)
 
@@ -723,9 +724,12 @@ async def get_recommendations_for_resume(
         resume_embedding = []
 
     # 2. PRE-FILTERING: Fetch top candidates from vector search
-    # Instead of fetching ALL jobs, we fetch top N candidates based on semantic similarity
-    # This reduces the number of jobs we need to do detailed scoring on
-    pre_filter_limit = settings.VECTOR_SEARCH_CANDIDATES  # Default: 100
+    # When reranking is enabled, we only need RERANKING_INPUT_CANDIDATES
+    # Otherwise, we use VECTOR_SEARCH_CANDIDATES for the original flow
+    if settings.RERANKING_ENABLED and settings.GOOGLE_API_KEY:
+        pre_filter_limit = settings.RERANKING_INPUT_CANDIDATES  # Default: 50
+    else:
+        pre_filter_limit = settings.VECTOR_SEARCH_CANDIDATES  # Default: 100
 
     if resume_embedding:
         # Fetch top candidates by vector similarity
@@ -750,14 +754,30 @@ async def get_recommendations_for_resume(
     if not rows:
         raise ValueError("No jobs found in database")
 
-    logger.info(f"Pre-filtered to {len(rows)} candidates for detailed scoring")
+    logger.info(f"Pre-filtered to {len(rows)} candidates from vector search")
+
+    # 3. Apply LLM reranking BEFORE detailed scoring (Option A)
+    # This allows the LLM to "rescue" semantically relevant jobs that
+    # vector search may have ranked lower due to embedding limitations
+    if settings.RERANKING_ENABLED and settings.GOOGLE_API_KEY:
+        async with TimingContext("llm_reranking"):
+            reranked_rows = await rerank_candidates(
+                resume, rows, settings.RERANKING_OUTPUT_CANDIDATES
+            )
+        rows_to_score = reranked_rows
+        logger.info(
+            f"Reranked {len(rows)} candidates, "
+            f"kept top {len(rows_to_score)} for detailed scoring"
+        )
+    else:
+        rows_to_score = rows
 
     # Build a map of job_id to Job for explanation generation
     jobs_map: Dict[str, Job] = {}
 
-    # 3. Calculate detailed scores only for pre-filtered candidates
+    # 4. Calculate detailed scores only for reranked candidates
     job_scores = []
-    for row in rows:
+    for row in rows_to_score:
         job = row[0]
         distance = row[1]
 
@@ -776,7 +796,7 @@ async def get_recommendations_for_resume(
     # Return top K recommendations
     recommendations = job_scores[:top_k]
 
-    # 4. Generate LLM explanations for top recommendations in batch
+    # 5. Generate LLM explanations for top recommendations in batch
     if settings.GOOGLE_API_KEY:
 
         async def generate_single_explanation(rec: JobRecommendation) -> None:
