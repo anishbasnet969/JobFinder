@@ -11,6 +11,7 @@ from app.database import get_async_db
 from app.models.job import Job
 from app.schemas.job import JobDescription, JobDescriptionCreate
 from app.services.job.job_embedder import generate_job_embedding
+from app.services.job.job_parser import parse_job_description
 
 
 router = APIRouter(prefix="/api/jobs", tags=["jobs"])
@@ -42,18 +43,22 @@ async def get_jobs(
     return [
         JobDescription(
             id=job.id,
-            job_id=job.job_id,
+            job_id=str(job.job_id),
             title=job.title,
             company=job.company,
-            type=job.type,
+            employment_type=job.employment_type,
             date=job.date,
             description=job.description,
             location=job.location,
             remote=job.remote,
             salary=job.salary,
             experience=job.experience,
+            min_experience_years=job.min_experience_years,
+            max_experience_years=job.max_experience_years,
+            experience_level=job.experience_level,
             responsibilities=job.responsibilities,
             qualifications=job.qualifications,
+            education=job.education,
             skills=job.skills,
         )
         for job in jobs
@@ -84,18 +89,22 @@ async def get_job(job_id: str, db: AsyncSession = Depends(get_async_db)):
 
     return JobDescription(
         id=job.id,
-        job_id=job.job_id,
+        job_id=str(job.job_id),
         title=job.title,
         company=job.company,
-        type=job.type,
+        employment_type=job.employment_type,
         date=job.date,
         description=job.description,
         location=job.location,
         remote=job.remote,
         salary=job.salary,
         experience=job.experience,
+        min_experience_years=job.min_experience_years,
+        max_experience_years=job.max_experience_years,
+        experience_level=job.experience_level,
         responsibilities=job.responsibilities,
         qualifications=job.qualifications,
+        education=job.education,
         skills=job.skills,
     )
 
@@ -105,48 +114,46 @@ async def create_job(
     job_data: JobDescriptionCreate, db: AsyncSession = Depends(get_async_db)
 ):
     """
-    Create a new job posting.
+    Create a new job posting job title and job description.
 
-    Args:
-        job_data: Job description data
-        db: Database session
-
-    Returns:
-        Created job description
-
-    Raises:
-        HTTPException: If job_id already exists
+    The incoming `job_data` is parsed to produce a
+    structured `JobDescriptionSchema` which we store in the database.
     """
-    # Check if job_id already exists
-    query = select(Job).where(Job.job_id == job_data.job_id)
-    result = await db.execute(query)
-    existing_job = result.scalar_one_or_none()
-
-    if existing_job:
+    # Parse the job description to structured schema
+    try:
+        parsed_job = await parse_job_description(job_data.title, job_data.description)
+    except Exception as e:
         raise HTTPException(
-            status_code=400, detail=f"Job with ID {job_data.job_id} already exists"
+            status_code=400, detail=f"Failed to parse job description: {e}"
         )
 
-    # Generate embedding
-    embedding = generate_job_embedding(job_data)
+    # Generate embedding from the parsed structured job
+    embedding = generate_job_embedding(parsed_job)
 
-    # Create job
+    # Create job record (DB will generate job_id)
     job = Job(
-        job_id=job_data.job_id,
-        title=job_data.title,
-        company=job_data.company,
-        type=job_data.type,
-        date=job_data.date,
-        description=job_data.description,
-        location=job_data.location.model_dump() if job_data.location else None,
-        remote=job_data.remote,
-        salary=job_data.salary,
-        experience=job_data.experience,
-        responsibilities=job_data.responsibilities,
-        qualifications=job_data.qualifications,
+        title=parsed_job.title,
+        company=parsed_job.company,
+        employment_type=parsed_job.employment_type,
+        date=parsed_job.date,
+        description=parsed_job.description,
+        location=parsed_job.location.model_dump() if parsed_job.location else None,
+        remote=parsed_job.remote.value if parsed_job.remote else None,
+        salary=parsed_job.salary,
+        experience=parsed_job.experience,
+        min_experience_years=parsed_job.min_experience_years,
+        max_experience_years=parsed_job.max_experience_years,
+        experience_level=parsed_job.experience_level,
+        responsibilities=parsed_job.responsibilities,
+        qualifications=parsed_job.qualifications,
+        education=(
+            [edu.model_dump() for edu in parsed_job.education]
+            if parsed_job.education
+            else None
+        ),
         skills=(
-            [skill.model_dump() for skill in job_data.skills]
-            if job_data.skills
+            [skill.model_dump() for skill in parsed_job.skills]
+            if parsed_job.skills
             else None
         ),
         embedding=embedding,
@@ -158,18 +165,22 @@ async def create_job(
 
     return JobDescription(
         id=job.id,
-        job_id=job.job_id,
+        job_id=str(job.job_id),
         title=job.title,
         company=job.company,
-        type=job.type,
+        employment_type=job.employment_type,
         date=job.date,
         description=job.description,
         location=job.location,
         remote=job.remote,
         salary=job.salary,
         experience=job.experience,
+        min_experience_years=job.min_experience_years,
+        max_experience_years=job.max_experience_years,
+        experience_level=job.experience_level,
         responsibilities=job.responsibilities,
         qualifications=job.qualifications,
+        education=job.education,
         skills=job.skills,
     )
 

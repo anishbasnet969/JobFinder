@@ -92,10 +92,15 @@ class JobDescriptionSchema(CustomBaseModel):
     )
 
 
-class JobDescriptionCreate(JobDescriptionSchema):
-    """Schema for creating a new job description."""
+class JobDescriptionCreate(CustomBaseModel):
+    """Simple schema for creating a job with just title and description.
 
-    job_id: str = Field(..., description="Unique identifier for the job")
+    This schema is used for incoming create requests. The full structured
+    job data will be produced by the parser service and stored in the DB.
+    """
+
+    title: str = Field(..., description="Job title")
+    description: str = Field(..., description="Job description")
 
 
 class JobDescription(JobDescriptionSchema):
