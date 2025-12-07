@@ -1,0 +1,296 @@
+{
+    "candidateId": "resume_JOHN SMITH",
+    "candidateName": "JOHN SMITH",
+    "recommendations": [
+        {
+            "jobId": "77721413-e1a2-4106-a043-b790ebb34bde",
+            "jobTitle": "Data Engineer",
+            "company": "Lendlease Group",
+            "matchScore": 0.7155015773716432,
+            "matchingFactors": {
+                "skillsMatch": 0.047619047619047616,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8143872618675254
+            },
+            "matchedSkills": [
+                "Python"
+            ],
+            "missingSkills": [
+                "analytical abilities",
+                "hive",
+                "data processing",
+                "hdfs",
+                "etl/elt development",
+                "big data technologies",
+                "data modeling",
+                "distributed computing",
+                "spark",
+                "distributed computing principles"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Data Engineer role, with extensive professional experience aligning well with the required years of experience. The candidate's Master of Science in Computer Science from Stanford University also indicates a high level of educational alignment. While the candidate possesses strong technical and soft skills, including Python, there are some identified skill gaps in areas such as data processing and big data technologies that slightly impact the overall skills match."
+        },
+        {
+            "jobId": "bf671a14-61f5-4ff7-ab06-47256528c3b8",
+            "jobTitle": "Back-End Developer (API Developer)",
+            "company": "Honeywell International",
+            "matchScore": 0.7150098257538112,
+            "matchingFactors": {
+                "skillsMatch": 0.058823529411764705,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8012157736034804
+            },
+            "matchedSkills": [
+                "Communication"
+            ],
+            "missingSkills": [
+                "analytical skills",
+                "swagger",
+                "collaboration abilities",
+                "api design",
+                "restful api",
+                "api security",
+                "api documentation tools",
+                "api design principles",
+                "problem solving",
+                "api security protocols"
+            ],
+            "explanation": "This candidate presents a strong experience and education match for the Back-End Developer role, with 100% alignment in both areas. While the candidate possesses strong communication skills, there is a notable skills gap in critical areas such as API design, RESTful API development, and API security, resulting in a lower overall skills match. The candidate's extensive experience and advanced degree significantly contribute to the high overall fit score despite the identified skill discrepancies."
+        },
+        {
+            "jobId": "e9ccac92-b248-452a-b7c0-fc54edf4ca67",
+            "jobTitle": "Data Engineer",
+            "company": "Mutual of Omaha Insurance",
+            "matchScore": 0.7144000711936176,
+            "matchingFactors": {
+                "skillsMatch": 0.038461538461538464,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.819138746312932
+            },
+            "matchedSkills": [
+                "Python"
+            ],
+            "missingSkills": [
+                "analytical abilities",
+                "analytical skills",
+                "communication & collaboration",
+                "etl development",
+                "data processing",
+                "hdfs",
+                "nosql",
+                "big data technologies",
+                "spark",
+                "distributed computing"
+            ],
+            "explanation": "This candidate presents a strong experience and education match for the Data Engineer role, possessing a Master of Science in Computer Science from Stanford University and extensive relevant professional experience. While the candidate's background aligns well with the general requirements, the skills match is currently low, with only Python identified as a direct overlap, indicating a need for development in areas such as Big Data Technologies, Data Processing, and Distributed Computing. Despite the skills gap, the candidate's overall fit is high, suggesting significant potential with targeted upskilling."
+        },
+        {
+            "jobId": "9d63b79d-d937-4c32-9446-f9605fee1e1f",
+            "jobTitle": "Data Scientist",
+            "company": "Meta Platforms",
+            "matchScore": 0.6315942038055793,
+            "matchingFactors": {
+                "skillsMatch": 0.19047619047619047,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8359006247461268
+            },
+            "matchedSkills": [
+                "Python",
+                "R",
+                "Machine Learning",
+                "Data Visualization"
+            ],
+            "missingSkills": [
+                "modeling",
+                "machine learning algorithms",
+                "data visualization tools",
+                "scikit-learn",
+                "pytorch",
+                "statistical analysis",
+                "data visualization libraries",
+                "feature engineering",
+                "spark",
+                "data preprocessing"
+            ],
+            "explanation": "This candidate presents a strong experience match, with 100% alignment to the required years of professional experience in a data science role. While the candidate possesses foundational skills such as Python, R, Machine Learning, and Data Visualization, there is a notable skills gap in specific areas like modeling, machine learning algorithms, and particular tools such as scikit-learn and PyTorch, resulting in a 19% skills match. The candidate's Master of Science in Computer Science from Stanford University contributes to a 50% education match."
+        },
+        {
+            "jobId": "40328085-bd1c-4c7f-8449-f4b415c5ce5e",
+            "jobTitle": "Data Analyst",
+            "company": "AES",
+            "matchScore": 0.6266637930187126,
+            "matchingFactors": {
+                "skillsMatch": 0.18181818181818182,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8248369902566683
+            },
+            "matchedSkills": [
+                "Machine Learning",
+                "Python",
+                "R",
+                "Data Visualization"
+            ],
+            "missingSkills": [
+                "modeling",
+                "scikit-learn",
+                "analytical skills",
+                "algorithms",
+                "pytorch",
+                "statistical analysis",
+                "tools",
+                "libraries",
+                "big data technologies",
+                "spark"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Data Scientist aligning perfectly with the required experience level. While their education is a partial match, their skills demonstrate a good foundation in areas like Machine Learning and Data Visualization, though there are some gaps in specific modeling and analytical techniques. The candidate's extensive experience significantly contributes to their overall strong fit for the Data Analyst role."
+        },
+        {
+            "jobId": "da3004d5-0a95-476e-b6c3-f59ed5b77f7e",
+            "jobTitle": "Marketing Analyst",
+            "company": "Constellation Brands",
+            "matchScore": 0.6116092984693795,
+            "matchingFactors": {
+                "skillsMatch": 0.14285714285714285,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8035800510203752
+            },
+            "matchedSkills": [
+                "Python",
+                "Data Visualization",
+                "Communication"
+            ],
+            "missingSkills": [
+                "tableau",
+                "methods",
+                "business acumen",
+                "statistical analysis",
+                "present complex data insights",
+                "power bi",
+                "transformation",
+                "data modeling",
+                "techniques",
+                "data analysis"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background aligning well with the required years of professional experience in data analysis. While the candidate possesses valuable skills such as Python, Data Visualization, and Communication, there are some gaps in areas like statistical analysis and business acumen, which impacts the overall skills match. The candidate's Master of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "db2288cd-14e2-4291-9983-388ee5023a3d",
+            "jobTitle": "Data Analyst (Business Intelligence)",
+            "company": "Tata Steel",
+            "matchScore": 0.6084702198785688,
+            "matchingFactors": {
+                "skillsMatch": 0.12,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8138808795142748
+            },
+            "matchedSkills": [
+                "data visualization",
+                "Data-Driven Decision Making",
+                "communication"
+            ],
+            "missingSkills": [
+                "tableau",
+                "influence",
+                "accuracy",
+                "analytical skills",
+                "reporting best practices",
+                "business intelligence",
+                "power bi",
+                "problem-solving",
+                "data-driven decision-making",
+                "data modeling"
+            ],
+            "explanation": "This candidate presents a strong experience match, aligning perfectly with the required years of experience for the Data Analyst role. While the candidate possesses some relevant skills such as Data-Driven Decision Making and communication, there are notable gaps in other required areas like SQL and Business Intelligence Concepts, contributing to a lower skills match score. The candidate's Master of Science in Computer Science from Stanford University provides a solid educational foundation, though it is not a direct match for the specific educational requirements of this role."
+        },
+        {
+            "jobId": "fed9ea59-8b7a-41e6-a947-b92d8b6eb75a",
+            "jobTitle": "Back-End Developer",
+            "company": "Glenmark Pharmaceuticals",
+            "matchScore": 0.6076377940676582,
+            "matchingFactors": {
+                "skillsMatch": 0.125,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8055511762706328
+            },
+            "matchedSkills": [
+                "Python",
+                "Communication"
+            ],
+            "missingSkills": [
+                "analytical abilities",
+                "team environment",
+                "apis",
+                "collaboration",
+                "problem-solving",
+                "nosql",
+                "consuming",
+                "server-side programming languages",
+                "java",
+                "sql"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Back-End Developer role, with their extensive professional background aligning well with the 1 to 15 years of required experience. While the candidate possesses valuable skills such as Python and Communication, there is a notable skills gap in areas crucial for back-end development, including API development and problem-solving. The candidate's Master of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "646e0f54-3f45-4d45-ad43-6239aa0a0d2d",
+            "jobTitle": "Senior Research Scientist",
+            "company": "Alumina Limited",
+            "matchScore": 0.6050995168574191,
+            "matchingFactors": {
+                "skillsMatch": 0.1111111111111111,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8092869563185656
+            },
+            "matchedSkills": [
+                "R",
+                "Communication"
+            ],
+            "missingSkills": [
+                "synthesizing scientific information",
+                "written communication",
+                "spss",
+                "detailed reports",
+                "presentations",
+                "literature review",
+                "research methodologies",
+                "problem-solving",
+                "developing research proposals",
+                "statistical analysis software"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Data Scientist and Software Engineer aligning well with the years of professional experience required for the Senior Research Scientist role. While the candidate possesses valuable skills such as R and Communication, there is a notable skills gap in areas like research methodologies and proposal development, which impacts the overall skills match. The candidate's Master of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "41e94fa0-fcf4-4264-a95c-d9854c62ada9",
+            "jobTitle": "Research Scientist",
+            "company": "Sainsbury's",
+            "matchScore": 0.6036479742471923,
+            "matchingFactors": {
+                "skillsMatch": 0.1111111111111111,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8034807858776583
+            },
+            "matchedSkills": [
+                "communication"
+            ],
+            "missingSkills": [
+                "market research methodologies",
+                "report writing and presentation skills",
+                "presenting complex findings",
+                "qualitative and quantitative research methods",
+                "market research tools and methodologies",
+                "data collection and analysis techniques",
+                "survey design and analysis",
+                "market research tools"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background aligning well with the required years and type of professional experience. While their education is relevant, it is only a partial match for the specific requirements of this role. The skills match is currently low, with a notable gap in crucial areas such as market research methodologies and report writing, although their communication skills are a positive point."
+        }
+    ]
+}

@@ -1,0 +1,194 @@
+{
+  "basics": {
+    "name": "Jane Doe",
+    "label": "Full Stack Developer",
+    "image": null,
+    "email": "jane.doe@example.com",
+    "phone": "123-456-7890",
+    "url": "http://www.janedoe.dev/",
+    "summary": "Highly motivated and experienced Full Stack Developer with a strong background in JavaScript, React, Node.js, and Java. Proven track record of delivering high-quality applications and leading teams to achieve project goals.",
+    "location": {
+      "address": null,
+      "postalCode": null,
+      "city": "New York",
+      "countryCode": null,
+      "region": "NY"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "janedoe",
+        "url": "http://www.linkedin.com/in/janedoe"
+      },
+      {
+        "network": "Portfolio",
+        "username": null,
+        "url": "http://www.janedoe.dev/portfolio"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ABC Corporation",
+      "location": "New York, NY",
+      "description": null,
+      "position": "Senior Full Stack Developer",
+      "url": null,
+      "startDate": "2020-01",
+      "endDate": "2025-12",
+      "summary": "Led the development of multiple full-stack applications using JavaScript, React, Node.js, and MongoDB, resulting in a 25% increase in sales and a 30% reduction in development time",
+      "highlights": [
+        "Designed and implemented responsive user interfaces using HTML, CSS, and JavaScript",
+        "Developed and deployed RESTful APIs using Node.js and Express.js",
+        "Collaborated with cross-functional teams to identify and prioritize project requirements",
+        "Integrated MongoDB for efficient data storage and retrieval, ensuring scalability and performance across applications."
+      ]
+    },
+    {
+      "name": "DEF Startups",
+      "location": "San Francisco, CA",
+      "description": null,
+      "position": "Full Stack Developer",
+      "url": null,
+      "startDate": "2018-06",
+      "endDate": "2019-12",
+      "summary": "Contributed to the development of a cloud-based e-commerce platform using Java, Spring Boot, and MySQL, resulting in a 50% increase in customer engagement and a 20% increase in sales",
+      "highlights": [
+        "Designed, developed, and tested 10 scalable backend APIs, leveraging Java and Spring Boot, within 6 months.",
+        "Implemented front-end features using HTML, CSS, and JavaScript",
+        "Participated in code reviews and ensured high-quality code standards"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Stanford University",
+      "url": null,
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2014-09",
+      "endDate": "2018-06",
+      "score": "3.5",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "Full Stack Development Certification",
+      "date": "2020-03",
+      "url": null,
+      "issuer": "FreeCodeCamp"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "React",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Node.js",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Java",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Spring Boot",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "MySQL",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "HTML",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "CSS",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Communication",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Teamwork",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Problem-solving",
+      "level": null,
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [],
+  "projects": [
+    {
+      "name": "Personal Portfolio Website",
+      "description": "Developed a responsive personal portfolio website using HTML, CSS, JavaScript, and React",
+      "highlights": [],
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+      ],
+      "startDate": "2020-03",
+      "endDate": "2020-04",
+      "url": null,
+      "roles": [
+        "Solo Developer"
+      ],
+      "entity": null,
+      "type": null
+    },
+    {
+      "name": "E-commerce Platform",
+      "description": "Collaborated with a team to develop a cloud-based e-commerce platform using Java, Spring Boot, and MySQL",
+      "highlights": [],
+      "keywords": [
+        "Java",
+        "Spring Boot",
+        "MySQL"
+      ],
+      "startDate": "2019-01",
+      "endDate": "2019-06",
+      "url": null,
+      "roles": [
+        "Full Stack Developer"
+      ],
+      "entity": null,
+      "type": null
+    }
+  ],
+  "references": []
+}

@@ -1,0 +1,317 @@
+{
+    "candidateId": "resume_Jane Doe",
+    "candidateName": "Jane Doe",
+    "recommendations": [
+        {
+            "jobId": "d7a69ccb-c4f5-4473-a9c4-9f2cba28494c",
+            "jobTitle": "Java Developer (Intern)",
+            "company": "Go-Ahead Group",
+            "matchScore": 0.7579383681453249,
+            "matchingFactors": {
+                "skillsMatch": 0.2,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8317534725812994
+            },
+            "matchedSkills": [
+                "Java",
+                "Spring Boot",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "sdlc",
+                "analytical skills",
+                "java frameworks",
+                "code",
+                "programming",
+                "debugging",
+                "software development lifecycle",
+                "ood",
+                "object-oriented design",
+                "spring"
+            ],
+            "explanation": "This candidate presents a strong experience match, with extensive professional experience aligning well with the job's requirements. Their educational background is also a perfect fit, meeting the specified qualifications. While the candidate possesses Java and Spring Boot skills, there is a notable gap in other required technical proficiencies such as Java frameworks and understanding of the software development lifecycle, which impacts the overall skills match."
+        },
+        {
+            "jobId": "9d606cdf-68f9-41d8-a44a-a62e49af3020",
+            "jobTitle": "Front-End Engineer (UI/UX Intern)",
+            "company": "Bath & Body Works",
+            "matchScore": 0.718503746320998,
+            "matchingFactors": {
+                "skillsMatch": 0.17391304347826086,
+                "experienceMatch": 1,
+                "educationMatch": 0.9,
+                "semanticSimilarity": 0.8001019418057312
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "communication"
+            ],
+            "missingSkills": [
+                "wireframing and prototyping tools",
+                "prototyping",
+                "wcag",
+                "collaboration",
+                "responsive and adaptive design",
+                "user research",
+                "adobe xd",
+                "usability testing methodologies",
+                "wireframing",
+                "user research and usability testing"
+            ],
+            "explanation": "This candidate presents a strong experience match due to their extensive background as a Senior Full Stack Developer, aligning well with the years of relevant experience required. The candidate's education in Computer Science from Stanford University also contributes significantly to a high education match. While the candidate possesses foundational skills like HTML, CSS, and JavaScript, the skills match is lower due to a gap in specialized UI/UX design tools and principles."
+        },
+        {
+            "jobId": "401398bf-d7fa-4983-9b35-da3dc1d257ab",
+            "jobTitle": "Frontend Web Developer (Intern)",
+            "company": "PNC Financial Services Group",
+            "matchScore": 0.6776205486768323,
+            "matchingFactors": {
+                "skillsMatch": 0.4,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8104821947073295
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Problem-solving",
+                "Communication"
+            ],
+            "missingSkills": [
+                "frontend frameworks",
+                "analytical skills",
+                "responsive design techniques",
+                "version control systems",
+                "git",
+                "angular",
+                "collaboration",
+                "user experience (ux) principles",
+                "core web technologies"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Frontend Web Developer (Intern) role, exceeding the required years of hands-on experience. While the candidate possesses foundational skills like HTML, CSS, and JavaScript, the skills match is moderate due to a gap in specific frontend frameworks and version control systems. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "02f5eb00-a1d4-42b5-9bc0-5cda7aa38713",
+            "jobTitle": "UI Developer",
+            "company": "Hero MotoCorp",
+            "matchScore": 0.6669294224074163,
+            "matchingFactors": {
+                "skillsMatch": 0.36363636363636365,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8040813259933013
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Problem-solving"
+            ],
+            "missingSkills": [
+                "analytical abilities",
+                "mobile-first development",
+                "communication and collaboration",
+                "cross-browser compatibility",
+                "front-end web development",
+                "responsive design",
+                "web performance optimization"
+            ],
+            "explanation": "This candidate presents a strong experience match for the UI Developer role, with their extensive background aligning well with the required years of professional experience. While the candidate possesses foundational skills such as HTML, CSS, and JavaScript, their overall skills match is moderate, indicating areas for development in specific UI-focused competencies like responsive design and web performance optimization. The candidate's educational background provides a solid theoretical base, contributing to a moderate education match for the position."
+        },
+        {
+            "jobId": "51f58bc6-eb2e-4741-955f-c2e351fe4cc3",
+            "jobTitle": "UI Developer (Intern)",
+            "company": "Avenue Supermarts (DMart)",
+            "matchScore": 0.6587209773675899,
+            "matchingFactors": {
+                "skillsMatch": 0.3333333333333333,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8015505761370267
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "Problem-solving",
+                "Communication"
+            ],
+            "missingSkills": [
+                "addressing related issues",
+                "mobile-first development",
+                "teamwork abilities",
+                "cross-browser compatibility",
+                "core front-end web development technologies",
+                "attention to detail",
+                "responsive design",
+                "best practices",
+                "techniques",
+                "web performance optimization"
+            ],
+            "explanation": "This candidate presents a strong experience match for the UI Developer (Intern) role, exceeding the typical requirements with their extensive background. While the candidate possesses foundational skills like HTML, CSS, and JavaScript, which are directly relevant, there is a notable skills gap in specialized areas such as responsive design and web performance optimization. The candidate's education in Computer Science provides a solid theoretical base, contributing to a moderate education match."
+        },
+        {
+            "jobId": "2e309050-d14d-46b7-bed8-0f0ece406d80",
+            "jobTitle": "Backend Web Developer",
+            "company": "AGCO",
+            "matchScore": 0.6431409497961308,
+            "matchingFactors": {
+                "skillsMatch": 0.2631578947368421,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.809405904447681
+            },
+            "matchedSkills": [
+                "Node.js",
+                "MySQL",
+                "problem-solving",
+                "Communication",
+                "teamwork"
+            ],
+            "missingSkills": [
+                "server-side programming languages",
+                "mongodb",
+                "analytical skills",
+                "git",
+                "restful apis",
+                "version control systems",
+                "python",
+                "time management",
+                "sql",
+                "database management systems"
+            ],
+            "explanation": "This candidate presents a strong experience match, with 100% alignment due to their extensive background in relevant development roles. While the candidate possesses valuable skills such as Node.js and MySQL, there is a 26% skills match, indicating areas where their current skillset may not fully align with the specific backend requirements. The candidate's educational background in Computer Science from Stanford University contributes to a 50% education match for the role."
+        },
+        {
+            "jobId": "77bac9eb-5f9f-4100-b6d4-5ea02573095a",
+            "jobTitle": "Java Developer (Intern)",
+            "company": "Exelon",
+            "matchScore": 0.6348643248997594,
+            "matchingFactors": {
+                "skillsMatch": 0.21052631578947367,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8289309838095638
+            },
+            "matchedSkills": [
+                "Java",
+                "Java",
+                "problem-solving",
+                "Communication",
+                "communication",
+                "Teamwork",
+                "teamwork"
+            ],
+            "missingSkills": [
+                "java ee",
+                "database integration",
+                "version control",
+                "analytical abilities",
+                "analytical skills",
+                "git",
+                "restful apis",
+                "backend development",
+                "version control systems",
+                "sql"
+            ],
+            "explanation": "This candidate presents a strong experience match due to their extensive background as a Senior Full Stack Developer, aligning well with the job's experience requirements. While the candidate possesses foundational skills like Java and Communication, there is a notable skills gap in areas such as Java EE, database integration, and version control, which impacts the overall skills match. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "fe5b88a2-0975-4088-8ede-bddc66acdbc4",
+            "jobTitle": "Frontend Web Designer",
+            "company": "Genuine Parts",
+            "matchScore": 0.6307897362164971,
+            "matchingFactors": {
+                "skillsMatch": 0.2222222222222222,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.800936722643766
+            },
+            "matchedSkills": [
+                "JavaScript",
+                "communication",
+                "teamwork",
+                "Problem-solving"
+            ],
+            "missingSkills": [
+                "user interface (ui) design",
+                "adobe creative suite",
+                "mobile-first development",
+                "html5",
+                "best practices",
+                "photoshop",
+                "xd",
+                "collaboration",
+                "attention to detail",
+                "design software"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Full Stack Developer aligning well with the years of professional experience required. While the candidate possesses valuable transferable skills such as JavaScript, communication, teamwork, and problem-solving, there is a notable skills gap in specific frontend design competencies like UI design and proficiency with design software. The candidate's educational background in Computer Science from Stanford University provides a solid foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "27ae2881-edfa-48eb-b29f-7b1373ebceb2",
+            "jobTitle": "UI Developer",
+            "company": "Bodycote",
+            "matchScore": 0.6290718772471047,
+            "matchingFactors": {
+                "skillsMatch": 0.21052631578947367,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8057611931989449
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "web performance optimization techniques",
+                "screen sizes",
+                "problem solving",
+                "responsive designs",
+                "analytical skills",
+                "team environment",
+                "front-end web development fundamentals",
+                "addressing related issues",
+                "various devices",
+                "communication skills"
+            ],
+            "explanation": "This candidate presents a strong experience match for the UI Developer role, possessing extensive professional experience that aligns with the job requirements. While the candidate demonstrates foundational skills such as HTML, CSS, and JavaScript, the skills match is moderate due to gaps in specialized UI development areas like web performance optimization and responsive design. The candidate's educational background provides a solid theoretical base, contributing to a moderate education match."
+        },
+        {
+            "jobId": "fed9ea59-8b7a-41e6-a947-b92d8b6eb75a",
+            "jobTitle": "Back-End Developer",
+            "company": "Glenmark Pharmaceuticals",
+            "matchScore": 0.6278280024016496,
+            "matchingFactors": {
+                "skillsMatch": 0.1875,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8238120096065986
+            },
+            "matchedSkills": [
+                "Java",
+                "Problem-solving",
+                "Communication"
+            ],
+            "missingSkills": [
+                "analytical abilities",
+                "team environment",
+                "apis",
+                "collaboration",
+                "nosql",
+                "consuming",
+                "server-side programming languages",
+                "python",
+                "sql",
+                "api development"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Back-End Developer role, possessing extensive professional experience that aligns with the job requirements. While the candidate's education is a partial match, their skills demonstrate a significant gap in areas crucial for back-end development, despite possessing some relevant skills like Java and Communication. The overall fit is high due to the strong experience alignment."
+        }
+    ]
+}

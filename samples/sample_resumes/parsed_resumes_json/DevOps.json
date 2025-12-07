@@ -1,0 +1,167 @@
+{
+  "basics": {
+    "name": "JOHN SMITH",
+    "label": "DEVOPS ENGINEER",
+    "image": null,
+    "email": "john.smith@email.com",
+    "phone": "123-456-7890",
+    "url": "https://johnsmith.com/",
+    "summary": "Highly motivated and experienced DevOps Engineer with 5+ years of experience in designing, implementing, and maintaining scalable and secure cloud-based systems. Proven track record of improving deployment efficiency by 30% and reducing downtime by 25%. Skilled in a range of technologies, including Docker, Kubernetes, Jenkins, and AWS.Adept at automating infrastructure with IaC tools like Terraform and Ansible to streamline operations and enhance system reliability.",
+    "location": {
+      "address": null,
+      "postalCode": null,
+      "city": "New York City",
+      "countryCode": null,
+      "region": "NY"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "johnsmith",
+        "url": "https://linkedin.com/in/johnsmith"
+      },
+      {
+        "network": "GitHub",
+        "username": "johnsmith",
+        "url": "https://johnsmith.github.io/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ABC Corporation",
+      "location": "New York City, NY",
+      "description": null,
+      "position": "Senior DevOps Engineer",
+      "url": null,
+      "startDate": "2020-01",
+      "endDate": "2025-12",
+      "summary": "Leading the development and implementation of cloud-based infrastructure for a team of 10 engineers. Collaborating with cross-functional teams to design and deploy scalable and secure systems. Ensuring compliance with industry standards and best practices.",
+      "highlights": [
+        "Designed and implemented a CI/CD pipeline using Jenkins and Docker, resulting in a 40% reduction in deployment time",
+        "Developed and maintained a highly available and scalable cloud-based system using AWS and Kubernetes, resulting in a 25% reduction in downtime",
+        "Collaborated with the development team to implement automated testing and deployment scripts, resulting in a 30% increase in code quality"
+      ]
+    },
+    {
+      "name": "DEF Startups",
+      "location": "San Francisco, CA",
+      "description": null,
+      "position": "DevOps Engineer",
+      "url": null,
+      "startDate": "2018-06",
+      "endDate": "2019-12",
+      "summary": "Designed and implemented cloud-based infrastructure for a team of 5 engineers. Collaborated with cross-functional teams to design and deploy scalable and secure systems. Ensured compliance with industry standards and best practices.",
+      "highlights": [
+        "Developed and maintained a cloud-based system using AWS and Docker, resulting in a 20% reduction in costs",
+        "Implemented automated testing and deployment scripts using Jenkins and GitLab CI/CD, resulting in a 25% increase in code quality",
+        "Collaborated with the development team to design and implement a CI/CD pipeline, resulting in a 30% reduction in deployment time"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Stanford University",
+      "url": null,
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2014-09",
+      "endDate": "2018-06",
+      "score": "3.5/4.0",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best DevOps Engineer",
+      "date": "2020-01",
+      "awarder": "ABC Corporation",
+      "summary": "Awarded Best DevOps Engineer for outstanding contributions to the development and implementation of cloud-based infrastructure"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AWS Certified DevOps Engineer",
+      "date": "2020-02",
+      "url": null,
+      "issuer": "AWS"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Docker",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Kubernetes",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Jenkins",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "AWS",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "GitLab CI/CD",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Cloud Computing",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Scalability",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Security",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Collaboration",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Communication",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Leadership",
+      "level": null,
+      "keywords": []
+    },
+    {
+      "name": "Problem-Solving",
+      "level": null,
+      "keywords": []
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [],
+  "projects": [],
+  "references": []
+}

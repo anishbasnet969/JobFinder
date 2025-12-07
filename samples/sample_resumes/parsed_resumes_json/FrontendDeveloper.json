@@ -1,0 +1,122 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Frontend Developer",
+    "image": null,
+    "email": "johndoe@example.com",
+    "phone": "123-456-7890",
+    "url": "http://johndoe.com/",
+    "summary": "Highly skilled and experienced frontend developer with a strong background in developing responsive and user-friendly web applications. Proficient in a range of technologies including HTML, CSS, JavaScript, React, Angular, and Vue.js. Proven leadership skills and experience in managing and motivating teams.",
+    "location": {
+      "address": null,
+      "postalCode": null,
+      "city": "New York",
+      "countryCode": null,
+      "region": null
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "username": "johndoe",
+        "url": "http://linkedin.com/in/johndoe"
+      },
+      {
+        "network": "Portfolio",
+        "username": null,
+        "url": "http://johndoe.com/portfolio"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "DEF Company",
+      "location": "New York",
+      "description": null,
+      "position": "Senior Frontend Developer",
+      "url": null,
+      "startDate": "2020",
+      "endDate": "2025-12",
+      "summary": "Leading the frontend development team and contributing to the development of multiple web applications using React, Angular, and Vue.js",
+      "highlights": [
+        "Developed and maintained multiple web applications with a 99.9% uptime",
+        "Improved application performance by 30% through optimization and caching",
+        "Collaborated with the backend team to integrate APIs and improve data flow"
+      ]
+    },
+    {
+      "name": "GHI Company",
+      "location": "New York",
+      "description": null,
+      "position": "Frontend Developer",
+      "url": null,
+      "startDate": "2019",
+      "endDate": "2020",
+      "summary": "Contributed to the development of multiple web applications using HTML, CSS, and JavaScript",
+      "highlights": [
+        "Developed and maintained multiple web applications with a 99.5% uptime",
+        "Improved application performance by 25% through optimization and caching",
+        "Collaborated with the design team to implement responsive and user-friendly interfaces"
+      ]
+    }
+  ],
+  "volunteer": null,
+  "education": [
+    {
+      "institution": "ABC University",
+      "url": null,
+      "area": "Computer Science",
+      "studyType": "Bachelor's",
+      "startDate": "2015",
+      "endDate": "2019",
+      "score": "3.5",
+      "courses": null
+    }
+  ],
+  "awards": null,
+  "certificates": [
+    {
+      "name": "Certified Frontend Developer",
+      "date": "2019",
+      "url": null,
+      "issuer": "XYZ Institute"
+    }
+  ],
+  "publications": null,
+  "skills": [
+    {
+      "name": "Frontend Development",
+      "level": null,
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Angular",
+        "Vue.js",
+        "Responsive Web Design",
+        "UX Design"
+      ]
+    },
+    {
+      "name": "Methodologies & Management",
+      "level": null,
+      "keywords": [
+        "Agile Development",
+        "Team Management"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": null,
+  "projects": null,
+  "references": null
+}

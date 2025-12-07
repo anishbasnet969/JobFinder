@@ -1,0 +1,36 @@
+Title: Network Analyst
+
+**Job Title:** Network Analyst (Network Performance)
+**Company:** Andersons
+**Location:** Kinshasa, Democratic Republic Of Congo
+
+### About the Role
+Andersons is seeking an experienced and analytical Network Performance Analyst to join our team in Kinshasa. In this critical part-time role, you will be responsible for monitoring, analyzing, and optimizing our network infrastructure to ensure peak performance, reliability, and efficiency. You will play a key role in identifying and resolving complex network issues to support our operational excellence.
+
+### Key Responsibilities
+*   Proactively monitor and analyze network performance data to identify trends, anomalies, and potential issues.
+*   Diagnose and troubleshoot complex network problems, including identifying performance bottlenecks, latency, and packet loss.
+*   Develop and recommend strategies for network optimization, including configuration changes and hardware upgrades.
+*   Collaborate closely with network engineering teams to implement performance improvements and validate their effectiveness.
+*   Conduct regular capacity planning and performance forecasting to support business growth and evolving network demands.
+*   Generate detailed performance reports and dashboards for technical teams and management, providing actionable insights.
+
+### Required Qualifications
+*   **Experience:** 5 to 14 years of professional experience in network performance analysis, network engineering, or a related field.
+*   **Education:** Master of Technology (M.Tech) or an equivalent advanced degree in a relevant technical discipline.
+
+### Required Skills
+*   In-depth knowledge of network performance analysis and monitoring methodologies.
+*   Hands-on experience with network monitoring tools (e.g., Wireshark, SolarWinds, Nagios).
+*   Strong troubleshooting and problem-solving skills for complex network issues.
+*   Expertise in network capacity planning and performance forecasting.
+*   Advanced data analysis skills to interpret network metrics, logs, and packet captures.
+*   Deep understanding of core network protocols (TCP/IP, BGP, OSPF, DNS, DHCP).
+
+### Compensation & Benefits
+*   **Salary Range:** $55,000 - $90,000 USD per year (pro-rated for part-time).
+*   **Benefits:** Flexible Spending Accounts (FSAs); Relocation Assistance; Legal Assistance; Employee Recognition Programs; Financial Counseling
+
+### Location & Work Arrangement
+*   **Location:** Kinshasa, Democratic Republic Of Congo
+*   **Work Type:** This is an on-site, Part-Time position.

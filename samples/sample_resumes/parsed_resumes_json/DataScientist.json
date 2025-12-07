@@ -1,0 +1,195 @@
+{
+  "basics": {
+    "name": "JOHN SMITH",
+    "label": "data scientist and software engineer",
+    "image": null,
+    "email": "john.smith@email.com",
+    "phone": "123-456-7890",
+    "url": "http://personalwebsite.com/",
+    "summary": "Highly motivated and experienced data scientist and software engineer with a strong background in machine learning, statistics, and data visualization. Proven track record of driving business growth through data-driven decision making and technical leadership.",
+    "location": {
+      "address": null,
+      "postalCode": null,
+      "city": "San Francisco",
+      "countryCode": null,
+      "region": "CA"
+    },
+    "profiles": [
+      {
+        "network": "linkedin",
+        "username": "johnsmith",
+        "url": "http://linkedin.com/in/johnsmith"
+      },
+      {
+        "network": "portfolio",
+        "username": null,
+        "url": "http://portfoliowebsite.com/"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ABC Corporation",
+      "location": "San Francisco, CA",
+      "description": null,
+      "position": "Senior Data Scientist - Software Engineer",
+      "url": null,
+      "startDate": "2020-01",
+      "endDate": "2025-12",
+      "summary": "Leading the development of AI-powered software solutions, utilizing machine learning algorithms and data analysis to drive business growth.",
+      "highlights": [
+        "Designed and implemented a predictive modeling framework that increased sales by 25% within 6 months",
+        "Developed and deployed a natural language processing (NLP) based chatbot, resulting in a 30% reduction in customer support queries",
+        "Collaborated with cross-functional teams to integrate data science and software engineering best practices, improving overall code quality by 40%",
+        "Mentored junior data scientists and software engineers, providing guidance on project development and ensuring timely delivery of high-quality solutions"
+      ]
+    },
+    {
+      "name": "DEF Startups",
+      "location": "New York, NY",
+      "description": null,
+      "position": "Data Scientist - Software Engineer",
+      "url": null,
+      "startDate": "2018-06",
+      "endDate": "2019-12",
+      "summary": "Worked on the development of data-driven software applications, applying statistical models and data visualization techniques to inform business decisions.",
+      "highlights": [
+        "Built and deployed a recommender system that increased user engagement by 50% within 3 months",
+        "Conducted A/B testing and analyzed results, leading to a 20% increase in conversion rates",
+        "Developed and maintained large-scale datasets, ensuring data quality and integrity, and reducing data-related issues by 25%",
+        "Worked closely with product managers to prioritize and implement new features, resulting in a 15% increase in customer satisfaction"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Stanford University",
+      "url": null,
+      "area": "Computer Science",
+      "studyType": "Master of Science",
+      "startDate": "2015-09",
+      "endDate": "2017-06",
+      "score": "3.8/4.0",
+      "courses": []
+    },
+    {
+      "institution": "University of California, Berkeley",
+      "url": null,
+      "area": "Statistics",
+      "studyType": "Bachelor of Science",
+      "startDate": "2011-09",
+      "endDate": "2015-06",
+      "score": "3.5/4.0",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Data Science Project",
+      "date": "2020-03",
+      "awarder": "ABC Corporation",
+      "summary": "Awarded for the development of a predictive modeling framework that increased sales by 25% within 6 months."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Data Scientist",
+      "date": "2019-06",
+      "url": null,
+      "issuer": "Data Science Council of America"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": null,
+      "keywords": [
+        "Python",
+        "R"
+      ]
+    },
+    {
+      "name": "Data Science",
+      "level": null,
+      "keywords": [
+        "Machine Learning",
+        "Data Visualization"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "level": null,
+      "keywords": [
+        "Communication",
+        "Team Management",
+        "Technical Leadership",
+        "Data-Driven Decision Making"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Fluent"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Hobbies",
+      "keywords": [
+        "Reading",
+        "Hiking"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "AI-Powered Chatbot",
+      "description": "Developed a conversational AI chatbot using NLP and machine learning techniques, integrated with a software application to provide automated customer support.",
+      "highlights": [],
+      "keywords": [
+        "Python",
+        "TensorFlow",
+        "Dialogflow"
+      ],
+      "startDate": "2020-01",
+      "endDate": "2020-03",
+      "url": null,
+      "roles": [
+        "Lead Developer"
+      ],
+      "entity": null,
+      "type": null
+    },
+    {
+      "name": "Predictive Modeling Framework",
+      "description": "Designed and implemented a predictive modeling framework using statistical models and machine learning algorithms, applied to forecast sales and revenue.",
+      "highlights": [],
+      "keywords": [
+        "R",
+        "Python",
+        "scikit-learn"
+      ],
+      "startDate": "2019-06",
+      "endDate": "2019-09",
+      "url": null,
+      "roles": [
+        "Data Scientist"
+      ],
+      "entity": null,
+      "type": null
+    }
+  ],
+  "references": [
+    {
+      "name": "John Doe, CEO",
+      "reference": "Supervisor\njohn.doe@abccorporation.com"
+    }
+  ]
+}

@@ -1,0 +1,301 @@
+{
+    "candidateId": "resume_John Doe",
+    "candidateName": "John Doe",
+    "recommendations": [
+        {
+            "jobId": "0bab4c5c-0607-472e-ace1-5e67d494dffe",
+            "jobTitle": "Front-End Engineer (UI/UX Intern)",
+            "company": "Bath & Body Works",
+            "matchScore": 0.7209175142904987,
+            "matchingFactors": {
+                "skillsMatch": 0.13043478260869565,
+                "experienceMatch": 1,
+                "educationMatch": 0.9,
+                "semanticSimilarity": 0.853235274553299
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "missingSkills": [
+                "wireframing and prototyping tools",
+                "communication",
+                "prototyping",
+                "wcag",
+                "collaboration",
+                "responsive and adaptive design",
+                "user research",
+                "adobe xd",
+                "usability testing methodologies",
+                "wireframing"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Front-End Engineer (UI/UX Intern) role, possessing extensive relevant experience in frontend development. While the candidate's education in Computer Science aligns well with the role's requirements, the skills match is lower due to a gap in specific UI/UX design skills such as wireframing and prototyping tools, despite having foundational frontend skills like HTML, CSS, and JavaScript."
+        },
+        {
+            "jobId": "9d606cdf-68f9-41d8-a44a-a62e49af3020",
+            "jobTitle": "Front-End Engineer (UI/UX Intern)",
+            "company": "Bath & Body Works",
+            "matchScore": 0.7188890685364036,
+            "matchingFactors": {
+                "skillsMatch": 0.13043478260869565,
+                "experienceMatch": 1,
+                "educationMatch": 0.9,
+                "semanticSimilarity": 0.8451214915369187
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "missingSkills": [
+                "wireframing and prototyping tools",
+                "communication",
+                "prototyping",
+                "wcag",
+                "collaboration",
+                "responsive and adaptive design",
+                "user research",
+                "adobe xd",
+                "usability testing methodologies",
+                "wireframing"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Front-End Engineer (UI/UX Intern) role, possessing extensive relevant experience in frontend development. While the candidate's education in Computer Science aligns well with the role's requirements, the skills match is lower due to a gap in specific UI/UX design skills such as wireframing and prototyping tools, despite having foundational frontend skills like HTML, CSS, and JavaScript."
+        },
+        {
+            "jobId": "27f8bf8b-34e6-48fe-b6a2-3f1995d2a5e3",
+            "jobTitle": "UX/UI Designer",
+            "company": "KLA",
+            "matchScore": 0.7137875855706297,
+            "matchingFactors": {
+                "skillsMatch": 0.05555555555555555,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.7995947867269635
+            },
+            "matchedSkills": [
+                "responsive web design"
+            ],
+            "missingSkills": [
+                "mobile applications",
+                "best practices",
+                "sketch",
+                "web applications",
+                "color theory",
+                "ui design principles",
+                "typography",
+                "layouts",
+                "adobe photoshop",
+                "graphic design tools"
+            ],
+            "explanation": "This candidate presents a strong experience and education match for the UX/UI Designer role, with 100% alignment in both areas. While the candidate has a solid foundation in frontend development and a specific match in responsive web design, there is a notable skills gap in core UX/UI design principles and tools, resulting in a lower skills match score. The overall fit is high, indicating significant potential despite the need for development in specific design competencies."
+        },
+        {
+            "jobId": "af474661-63c3-47ef-a003-460d2c09517b",
+            "jobTitle": "UX/UI Designer",
+            "company": "CDW",
+            "matchScore": 0.7039728184309987,
+            "matchingFactors": {
+                "skillsMatch": 0,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8158912737239947
+            },
+            "matchedSkills": [],
+            "missingSkills": [
+                "mobile applications",
+                "visual composition",
+                "web applications",
+                "color theory",
+                "visual designs",
+                "ui design principles",
+                "typography",
+                "adobe illustrator",
+                "layouts",
+                "adobe photoshop"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Frontend Developer aligning well with the years of professional experience required for the UX/UI Designer role. Their Bachelor's in Computer Science also meets the educational qualifications. However, there is a significant skills gap, as none of the required skills such as UI Design Principles, Graphic Design Tools, Visual Composition, or Responsive Design were identified in the candidate's profile, leading to a 0% skills match."
+        },
+        {
+            "jobId": "bf0c00dd-7432-458e-b600-a1ccfdb798c2",
+            "jobTitle": "UX/UI Designer",
+            "company": "Continental Resources",
+            "matchScore": 0.7020625546574593,
+            "matchingFactors": {
+                "skillsMatch": 0,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.808250218629837
+            },
+            "matchedSkills": [],
+            "missingSkills": [
+                "mobile applications",
+                "screen sizes",
+                "responsive designs",
+                "communication",
+                "web applications",
+                "color theory",
+                "collaboration",
+                "ui design principles",
+                "typography",
+                "adobe photoshop"
+            ],
+            "explanation": "This candidate presents a strong match in terms of experience and education, with 100% alignment in both areas, indicating a solid foundation for the role. While the candidate's extensive experience in frontend development is highly relevant, the skills match is currently 0%, suggesting a gap in specific UI design proficiencies and related tools. The overall fit score of 81% reflects the significant experience and education, but highlights the need to address the identified skill discrepancies for a more complete alignment."
+        },
+        {
+            "jobId": "401398bf-d7fa-4983-9b35-da3dc1d257ab",
+            "jobTitle": "Frontend Web Developer (Intern)",
+            "company": "PNC Financial Services Group",
+            "matchScore": 0.6743208246724057,
+            "matchingFactors": {
+                "skillsMatch": 0.3333333333333333,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8639499653562894
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript",
+                "React",
+                "Angular"
+            ],
+            "missingSkills": [
+                "frontend frameworks",
+                "analytical skills",
+                "responsive design techniques",
+                "version control systems",
+                "git",
+                "communication",
+                "collaboration",
+                "problem-solving",
+                "user experience (ux) principles",
+                "core web technologies"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Frontend Developer aligning well with the required years of experience. While the candidate possesses foundational frontend skills such as HTML, CSS, and JavaScript, the skills match is moderate due to gaps in specific frameworks and techniques like responsive design and version control. The candidate's Bachelor's in Computer Science provides a relevant educational background, contributing to a moderate education match."
+        },
+        {
+            "jobId": "5071596b-93c2-496d-b4f5-19f8282b348e",
+            "jobTitle": "Software Engineer (Frontend Developer)",
+            "company": "Tencent Music Entertainment Group",
+            "matchScore": 0.6683257391929187,
+            "matchingFactors": {
+                "skillsMatch": 0.3125,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8608029567716751
+            },
+            "matchedSkills": [
+                "JavaScript",
+                "React",
+                "Angular",
+                "Vue.js",
+                "Responsive Web Design"
+            ],
+            "missingSkills": [
+                "frontend frameworks",
+                "mobile-first development",
+                "html5",
+                "git",
+                "version control systems",
+                "cross-browser compatibility",
+                "es6+",
+                "core web technologies",
+                "browser rendering behavior",
+                "frontend performance optimization"
+            ],
+            "explanation": "This candidate presents a strong experience match, aligning perfectly with the required years of professional frontend development experience. While the candidate possesses valuable skills such as JavaScript, React, Angular, Vue.js, and Responsive Web Design, there are some gaps in specific frontend technologies and version control systems, leading to a moderate skills match. The candidate's Bachelor's in Computer Science provides a foundational education, contributing to a partial education match for the role."
+        },
+        {
+            "jobId": "02f5eb00-a1d4-42b5-9bc0-5cda7aa38713",
+            "jobTitle": "UI Developer",
+            "company": "Hero MotoCorp",
+            "matchScore": 0.6511444628229028,
+            "matchingFactors": {
+                "skillsMatch": 0.2727272727272727,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8318505785643389
+            },
+            "matchedSkills": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "missingSkills": [
+                "analytical abilities",
+                "mobile-first development",
+                "communication and collaboration",
+                "cross-browser compatibility",
+                "problem-solving",
+                "front-end web development",
+                "responsive design",
+                "web performance optimization"
+            ],
+            "explanation": "This candidate presents a strong experience match for the UI Developer role, aligning perfectly with the required years of professional experience in front-end development. While the candidate possesses foundational skills such as HTML, CSS, and JavaScript, there are notable gaps in areas like cross-browser compatibility, problem-solving, and communication, which contribute to a lower skills match score. The candidate's Bachelor's in Computer Science provides a relevant educational background, though it is not a perfect match for the specific requirements of this role."
+        },
+        {
+            "jobId": "47e18abd-64f8-4394-9932-454bfd1ee21d",
+            "jobTitle": "Front-End Engineer",
+            "company": "Tencent Holdings",
+            "matchScore": 0.6435612984827705,
+            "matchingFactors": {
+                "skillsMatch": 0.21052631578947367,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8637188781416083
+            },
+            "matchedSkills": [
+                "JavaScript",
+                "Frontend Development",
+                "frontend development",
+                "React",
+                "Angular"
+            ],
+            "missingSkills": [
+                "modern frontend frameworks and libraries",
+                "javascript programming",
+                "git",
+                "version control systems",
+                "dom manipulation",
+                "browser event model",
+                "ajax",
+                "debugging",
+                "asynchronous programming",
+                "problem-solving"
+            ],
+            "explanation": "This candidate demonstrates a strong experience match, with their background as a Senior Frontend Developer aligning perfectly with the job's requirements. While the candidate possesses core frontend development skills, there is a notable gap in specific modern frameworks and version control systems, impacting the skills match score. The candidate's Bachelor's in Computer Science provides a foundational education, contributing moderately to the overall fit."
+        },
+        {
+            "jobId": "1737c923-1333-4160-bc60-f5add10159e8",
+            "jobTitle": "Front-End Developer (UI/UX)",
+            "company": "China Mobile",
+            "matchScore": 0.640846533128826,
+            "matchingFactors": {
+                "skillsMatch": 0.2,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.863386132515304
+            },
+            "matchedSkills": [
+                "UX Design",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "missingSkills": [
+                "usability testing",
+                "prototyping and wireframing",
+                "front-end development languages",
+                "prototyping",
+                "user testing",
+                "collaboration and teamwork",
+                "collaboration",
+                "interaction design",
+                "teamwork",
+                "web design principles"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Frontend Developer aligning well with the required years of professional experience. While the candidate possesses foundational skills in frontend development and UX design, there are some gaps in specific areas like usability testing and prototyping. The candidate's Bachelor's in Computer Science provides a solid educational base, contributing moderately to the overall fit."
+        }
+    ]
+}

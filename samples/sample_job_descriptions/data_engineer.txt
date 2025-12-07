@@ -1,0 +1,32 @@
+Title: Data Engineer
+
+**Job Title:** Data Engineer
+**Company:** Mutual of Omaha Insurance
+**Role:** Big Data Engineer
+
+### About the Role
+Mutual of Omaha Insurance is seeking a skilled Big Data Engineer to develop and manage our large-scale data solutions. In this role, you will be instrumental in transforming vast, complex datasets into valuable insights that drive critical business decisions. This is an opportunity to work with cutting-edge technologies and make a significant impact on our data infrastructure.
+
+### Key Responsibilities
+*   Design, build, and maintain scalable and reliable big data pipelines using technologies such as Hadoop and Spark.
+*   Develop and manage robust big data solutions, including data storage, processing, and analysis platforms.
+*   Process and analyze large, complex datasets to extract meaningful information and support data-driven initiatives.
+*   Optimize data processing workflows and storage systems for maximum performance, efficiency, and scalability.
+*   Collaborate with data scientists, analysts, and other stakeholders to understand data requirements and deliver effective solutions.
+*   Ensure data quality and integrity across all big data systems.
+
+### Required Qualifications
+*   **Experience:** 2 to 10 years of professional experience in a data engineering or a similar role.
+*   **Education:** Master of Technology (M.Tech) or an equivalent advanced degree in Computer Science, Engineering, or a related field.
+
+### Required Skills
+*   **Technical Skills:** Proficiency in big data technologies, including Hadoop, Spark, HDFS, and MapReduce; Strong experience in data processing, ETL development, and data analysis; Solid understanding of distributed computing principles and architectures; Experience with data warehousing solutions and database technologies (SQL, NoSQL); Proficiency in programming languages such as Python, Java, or Scala.
+*   **Soft Skills:** Strong analytical and problem-solving abilities; Excellent communication and collaboration skills.
+
+### Compensation & Benefits
+*   **Salary Range:** $63,000 - $111,000 USD per year, commensurate with experience.
+*   **Benefits:** Employee Assistance Programs (EAP); Tuition Reimbursement; Profit-Sharing; Transportation Benefits; Parental Leave
+
+### Location & Work Arrangement
+*   **Location:** Juba, South Sudan
+*   **Work Type:** Contract

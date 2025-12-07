@@ -1,0 +1,35 @@
+Title: Software Tester
+
+**Job Title:** Software Tester (Automation)
+**Company:** Melrose Industries
+
+**About the Role**
+Join Melrose Industries as an Automation Tester and play a pivotal role in our quality assurance process. You will be responsible for designing, developing, and executing automated tests to ensure our software applications meet the highest standards of functionality and performance. This is an exciting opportunity to contribute to innovative projects and drive continuous improvement in our testing methodologies.
+
+**Key Responsibilities**
+- Design, develop, and implement robust, scalable, and maintainable test automation frameworks.
+- Create and execute comprehensive automated test scripts for functional, regression, and performance testing.
+- Analyze and report on test results, identify and track defects, and provide detailed feedback to development teams.
+- Collaborate with developers, product managers, and other stakeholders to understand requirements and ensure complete test coverage.
+- Contribute to the continuous improvement of the QA process by evaluating and implementing new testing tools and technologies.
+- Manage and prepare the test data required for automated test execution.
+
+**Required Qualifications**
+- **Experience:** 0 to 9 years of experience in software quality assurance and test automation.
+- **Education:** Master of Commerce (M.Com) or an equivalent degree.
+
+**Required Skills**
+- Proficiency with test automation tools such as Selenium, Appium, or similar.
+- Strong scripting skills in languages like Python or Java.
+- Experience in developing and maintaining test automation frameworks.
+- Familiarity with Continuous Integration/Continuous Deployment (CI/CD) tools (e.g., Jenkins, GitLab CI).
+- Solid understanding of test data management strategies and tools.
+- Excellent analytical and problem-solving skills with a keen attention to detail.
+
+**Compensation & Benefits**
+- **Salary:** Annual salary range of $65,000 - $109,000 USD, commensurate with experience.
+- **Benefits:** Health Insurance; Retirement Plans; Paid Time Off (PTO); Flexible Work Arrangements; Employee Assistance Programs (EAP)
+
+**Location & Work Arrangement**
+- **Location:** Phnom Penh, Cambodia
+- **Work Type:** This is a temporary, on-site position.

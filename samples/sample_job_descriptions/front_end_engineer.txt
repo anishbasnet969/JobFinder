@@ -1,0 +1,36 @@
+Title: Front-End Engineer
+
+**Job Title:** Front-End Engineer (UI/UX Intern)
+**Company:** Bath & Body Works
+
+### About the Role
+Bath & Body Works is seeking a creative and detail-oriented Front-End Engineer Intern to join our dynamic team. In this role, you will focus on creating user-friendly and visually appealing interfaces, translating design concepts into functional, responsive web applications that optimize the user experience and interaction.
+
+### Key Responsibilities
+* Translate UI/UX design wireframes and mockups into clean, efficient, and responsive code for our web platforms.
+* Design and develop user-centric interfaces, ensuring a seamless and intuitive user journey from start to finish.
+* Conduct comprehensive usability testing and gather user feedback to iterate on and continuously improve interface designs.
+* Collaborate closely with product managers, designers, and other engineers to implement innovative solutions for product direction, visuals, and experience.
+* Ensure all front-end development adheres to modern web accessibility standards (WCAG) and best practices.
+* Create and maintain interactive prototypes and style guides to ensure consistency across all digital products.
+
+### Required Qualifications
+* **Experience:** 1 to 12 years of relevant experience in front-end development or UI/UX design.
+* **Education:** Bachelor of Business Administration (BBA) or a related field.
+
+### Required Skills
+* Proficiency in UI/UX design principles and best practices.
+* Strong experience in frontend web development, including HTML, CSS, and JavaScript.
+* Demonstrated ability with wireframing and prototyping tools (e.g., Figma, Sketch, Adobe XD).
+* Experience with user research and usability testing methodologies.
+* In-depth knowledge of web accessibility standards (WCAG).
+* Expertise in implementing responsive and adaptive design.
+* Excellent collaboration and communication skills.
+
+### Compensation & Benefits
+* **Salary Range:** $59,000 - $87,000 USD Annually
+* **Benefits:** Employee Referral Programs; Financial Counseling; Health and Wellness Facilities; Casual Dress Code; Flexible Spending Accounts (FSAs)
+
+### Location & Work Arrangement
+* **Location:** Yamoussoukro, Cote d'Ivoire
+* **Work Type:** Intern

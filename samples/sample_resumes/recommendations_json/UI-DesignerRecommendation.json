@@ -1,0 +1,304 @@
+{
+    "candidateId": "resume_Emily Chen",
+    "candidateName": "Emily Chen",
+    "recommendations": [
+        {
+            "jobId": "bf0c00dd-7432-458e-b600-a1ccfdb798c2",
+            "jobTitle": "UX/UI Designer",
+            "company": "Continental Resources",
+            "matchScore": 0.762356902375278,
+            "matchingFactors": {
+                "skillsMatch": 0.1875,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8619276095011119
+            },
+            "matchedSkills": [
+                "Visual Design",
+                "Communication",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "mobile applications",
+                "screen sizes",
+                "responsive designs",
+                "web applications",
+                "color theory",
+                "ui design principles",
+                "typography",
+                "adobe photoshop",
+                "graphic design tools",
+                "layout"
+            ],
+            "explanation": "This candidate presents a strong match in terms of experience and education, possessing a Master of Science in Human-Computer Interaction from Stanford University and extensive experience aligning with the required years of professional UI design. While the candidate demonstrates proficiency in Visual Design, Communication, and Collaboration, there is a notable skills gap in areas such as mobile applications, screen sizes, responsive designs, web applications, and color theory, resulting in a lower overall skills match."
+        },
+        {
+            "jobId": "3ba616cd-b772-4107-b9c5-3f564fe12fdd",
+            "jobTitle": "UX/UI Designer",
+            "company": "Delta Air Lines",
+            "matchScore": 0.7482147710486682,
+            "matchingFactors": {
+                "skillsMatch": 0.13333333333333333,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8595257508613394
+            },
+            "matchedSkills": [
+                "Communication",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "mobile applications",
+                "web applications",
+                "layout",
+                "color theory",
+                "ui design principles",
+                "illustrator",
+                "typography",
+                "modern design trends",
+                "adobe photoshop",
+                "responsive design"
+            ],
+            "explanation": "This candidate presents a strong match in terms of experience and education, with 100% alignment in both areas, exceeding the job's requirements. While the candidate possesses strong communication and collaboration skills, there is a significant skills gap in core UX/UI design principles and tools, resulting in a lower skills match score. The candidate's extensive experience and advanced education in Human-Computer Interaction contribute to a high overall fit despite the identified skill discrepancies."
+        },
+        {
+            "jobId": "27f8bf8b-34e6-48fe-b6a2-3f1995d2a5e3",
+            "jobTitle": "UX/UI Designer",
+            "company": "KLA",
+            "matchScore": 0.7289349552381649,
+            "matchingFactors": {
+                "skillsMatch": 0.05555555555555555,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8601842653971041
+            },
+            "matchedSkills": [
+                "Visual Design"
+            ],
+            "missingSkills": [
+                "mobile applications",
+                "best practices",
+                "sketch",
+                "web applications",
+                "color theory",
+                "ui design principles",
+                "typography",
+                "layouts",
+                "adobe photoshop",
+                "graphic design tools"
+            ],
+            "explanation": "This candidate presents a strong match due to their extensive experience and educational background, both scoring 100%. Their Master of Science in Human-Computer Interaction from Stanford University and their tenure as a Senior UX/UI Designer at Microsoft align perfectly with the role's requirements. While the candidate demonstrates proficiency in Visual Design, there are some skill gaps in areas such as mobile applications, best practices, and specific tools like Sketch, contributing to a lower Skills Match score."
+        },
+        {
+            "jobId": "af474661-63c3-47ef-a003-460d2c09517b",
+            "jobTitle": "UX/UI Designer",
+            "company": "CDW",
+            "matchScore": 0.7136012075247183,
+            "matchingFactors": {
+                "skillsMatch": 0,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8544048300988734
+            },
+            "matchedSkills": [],
+            "missingSkills": [
+                "mobile applications",
+                "visual composition",
+                "web applications",
+                "color theory",
+                "visual designs",
+                "ui design principles",
+                "typography",
+                "adobe illustrator",
+                "layouts",
+                "adobe photoshop"
+            ],
+            "explanation": "This candidate presents a strong match in terms of experience and education, with 100% alignment in both areas, exceeding the job's requirements. While the candidate's skills do not directly align with the specific requirements listed, their extensive experience and advanced education suggest a high potential for a successful fit. The overall fit score of 85% reflects the significant overlap in experience and education despite the identified skills gap."
+        },
+        {
+            "jobId": "1737c923-1333-4160-bc60-f5add10159e8",
+            "jobTitle": "Front-End Developer (UI/UX)",
+            "company": "China Mobile",
+            "matchScore": 0.6514320496042956,
+            "matchingFactors": {
+                "skillsMatch": 0.25,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8557281984171823
+            },
+            "matchedSkills": [
+                "Prototyping",
+                "Wireframing",
+                "JavaScript",
+                "Interaction Design",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "usability testing",
+                "prototyping and wireframing",
+                "front-end development languages",
+                "user interface (ui) design",
+                "html",
+                "css",
+                "user testing",
+                "collaboration and teamwork",
+                "ux design",
+                "user experience (ux) design"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior UX/UI Designer aligning well with the role's requirements. While the candidate possesses several key skills such as Prototyping, Wireframing, and Interaction Design, there are some gaps in specific front-end development languages and usability testing. The candidate's Master's degree in Human-Computer Interaction from Stanford University provides a solid educational foundation, contributing to a good overall fit for the position."
+        },
+        {
+            "jobId": "383bbad5-76f0-488a-b1d3-cb05be928fb4",
+            "jobTitle": "UX/UI Designer",
+            "company": "FedEx",
+            "matchScore": 0.641611149469867,
+            "matchingFactors": {
+                "skillsMatch": 0.18181818181818182,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8846264160612861
+            },
+            "matchedSkills": [
+                "Prototyping",
+                "user research",
+                "communication",
+                "collaboration"
+            ],
+            "missingSkills": [
+                "usability testing",
+                "cross-functional teams",
+                "user research & testing",
+                "sketch",
+                "wireframes",
+                "high-fidelity prototypes",
+                "user flows",
+                "ux/ui design and prototyping tools",
+                "information architecture",
+                "user feedback analysis"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior UX/UI Designer aligning perfectly with the required years of professional experience. While the candidate possesses valuable skills such as prototyping, user research, communication, and collaboration, there is a notable skills gap in areas like usability testing and wireframing, contributing to a lower skills match score. The candidate's Master of Science in Human-Computer Interaction from Stanford University provides a solid educational foundation, though it is only partially aligned with the specific requirements of this role."
+        },
+        {
+            "jobId": "3d14ea10-ba84-4213-b950-908cc124454e",
+            "jobTitle": "UX/UI Designer (Interaction Designer)",
+            "company": "StoneX Group",
+            "matchScore": 0.6328300575595167,
+            "matchingFactors": {
+                "skillsMatch": 0.17391304347826086,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8574071867598059
+            },
+            "matchedSkills": [
+                "Wireframing",
+                "Prototyping",
+                "Communication",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "cross-functional teams",
+                "user-centered design methodologies",
+                "core interaction design principles",
+                "user behavior",
+                "micro-interaction",
+                "animation",
+                "collaboration skills",
+                "micro-interaction design",
+                "adobe xd",
+                "wireframing tools"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior UX/UI Designer aligning perfectly with the required years of professional experience. While the candidate demonstrates proficiency in skills such as wireframing, prototyping, communication, and collaboration, there is a notable skills gap in areas like user-centered design methodologies and micro-interaction design. The candidate's education is a partial match, holding a Master of Science in Human-Computer Interaction, which is relevant but may not fully encompass all aspects of the role's specific educational nuances."
+        },
+        {
+            "jobId": "f3ca5de7-4399-40b4-accc-2ef6557044aa",
+            "jobTitle": "UX/UI Designer",
+            "company": "Keurig Dr Pepper Inc.",
+            "matchScore": 0.6274832684754597,
+            "matchingFactors": {
+                "skillsMatch": 0.14285714285714285,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8670759310446958
+            },
+            "matchedSkills": [
+                "user research",
+                "communication",
+                "collaboration"
+            ],
+            "missingSkills": [
+                "usability testing",
+                "cross-functional teams",
+                "communication & collaboration",
+                "sketch",
+                "wireframes",
+                "user flows",
+                "information architecture",
+                "ux/ui design tools",
+                "adobe xd",
+                "synthesize findings"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior UX/UI Designer aligning perfectly with the role's requirements. While the candidate's education is relevant, it is only a partial match for the specific requirements. The skills match is currently low, though specific skills like user research, communication, and collaboration are identified as aligned."
+        },
+        {
+            "jobId": "71137a2f-15a4-4778-aa08-8ac1609e95d4",
+            "jobTitle": "UX/UI Designer",
+            "company": "Geely Automobile Holdings",
+            "matchScore": 0.6265129373379312,
+            "matchingFactors": {
+                "skillsMatch": 0.14285714285714285,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8631946064945821
+            },
+            "matchedSkills": [
+                "Visual Design",
+                "Communication",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "mobile applications",
+                "best practices",
+                "web applications",
+                "color theory",
+                "ui design principles",
+                "typography",
+                "ui design work",
+                "design process",
+                "adobe photoshop",
+                "graphic design tools"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their senior-level background at Microsoft aligning well with the required years of professional experience. While the candidate's education is a partial match, their skills alignment is currently low, with only Visual Design, Communication, and Collaboration identified as direct matches to the job requirements."
+        },
+        {
+            "jobId": "e2b29350-2a75-4901-a14a-f5db7a51a57b",
+            "jobTitle": "UX/UI Designer (Interaction Design Intern)",
+            "company": "Johnson & Johnson",
+            "matchScore": 0.6259431675638656,
+            "matchingFactors": {
+                "skillsMatch": 0.16,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8437726702554625
+            },
+            "matchedSkills": [
+                "wireframing",
+                "prototyping",
+                "Communication",
+                "User Interface Design"
+            ],
+            "missingSkills": [
+                "cognitive psychology",
+                "designing animations",
+                "core interaction design principles",
+                "human-computer interaction",
+                "micro-interactions",
+                "user behavior",
+                "translate complex requirements",
+                "user behavior & cognitive psychology",
+                "cross-functional design processes",
+                "adobe xd"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior UX/UI Designer aligning well with the internship's experience requirements. While the candidate possesses foundational skills such as wireframing, prototyping, communication, and user interface design, there is a notable skills gap in areas like cognitive psychology, animation design, and core interaction design principles. The candidate's Master of Science in Human-Computer Interaction from Stanford University provides a relevant educational background, though it is only a partial match for the specific requirements of this role."
+        }
+    ]
+}

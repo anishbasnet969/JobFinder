@@ -1,0 +1,301 @@
+{
+    "candidateId": "resume_JOHN SMITH",
+    "candidateName": "JOHN SMITH",
+    "recommendations": [
+        {
+            "jobId": "3e731dae-129c-4fde-aa8e-68f0af2ef706",
+            "jobTitle": "Software Architect (Cloud Architect Internship)",
+            "company": "DCP Midstream",
+            "matchScore": 0.7617323299249019,
+            "matchingFactors": {
+                "skillsMatch": 0.20833333333333334,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8385959863662744
+            },
+            "matchedSkills": [
+                "AWS",
+                "Docker",
+                "Kubernetes",
+                "Communication",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "cross-functional teams",
+                "written communication",
+                "ci/cd pipelines",
+                "strategic problem-solving",
+                "microsoft azure",
+                "cloud computing platforms",
+                "cloud security principles",
+                "ci/cd & devops",
+                "cloud security",
+                "verbal communication"
+            ],
+            "explanation": "This candidate presents a strong experience match, aligning perfectly with the required years of professional experience, and also has a perfect education match with a relevant degree. While the candidate demonstrates a solid foundation in key areas such as AWS, Docker, and Kubernetes, the skills match is moderate, indicating some areas for development in specific cloud platforms and strategic problem-solving. The candidate's existing collaboration and communication skills are valuable assets that contribute to their overall fit for the role."
+        },
+        {
+            "jobId": "7cdbcbaf-e2a9-4e0c-b3c8-593fd4ceac3c",
+            "jobTitle": "IT Manager (Infrastructure)",
+            "company": "Workspace Group",
+            "matchScore": 0.710736610235707,
+            "matchingFactors": {
+                "skillsMatch": 0.03225806451612903,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.810688376426699
+            },
+            "matchedSkills": [
+                "AWS"
+            ],
+            "missingSkills": [
+                "disaster recovery planning",
+                "system administration",
+                "it security",
+                "azure",
+                "vmware",
+                "nas",
+                "linux",
+                "storage management",
+                "system",
+                "drp"
+            ],
+            "explanation": "This candidate presents a strong alignment with the IT Manager role, particularly in their educational background and extensive experience, both scoring 100%. While the candidate possesses valuable cloud infrastructure management skills, specifically with AWS, there is a notable gap in other required areas such as disaster recovery planning, system administration, and IT security, contributing to a lower skills match score."
+        },
+        {
+            "jobId": "538dd401-1345-4ad5-aac2-e1aa2d5115e2",
+            "jobTitle": "Network Security Engineer (Intern)",
+            "company": "Chewy",
+            "matchScore": 0.7009617699453051,
+            "matchingFactors": {
+                "skillsMatch": 0,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8038470797812205
+            },
+            "matchedSkills": [],
+            "missingSkills": [
+                "lifecycle management",
+                "industry-standard tools and methodologies",
+                "recovery procedures",
+                "vulnerability assessments",
+                "penetration testing",
+                "intrusion prevention systems (ips)",
+                "forensic analysis",
+                "incident response",
+                "network security protocols and technologies",
+                "incident response and recovery"
+            ],
+            "explanation": "This candidate presents a strong match in terms of education, holding a Bachelor of Science in Computer Science from Stanford University, and experience, with 100% alignment to the required years of professional experience. However, there is a significant skills gap, as the candidate's expertise in DevOps tools like Docker and Kubernetes does not directly translate to the required network security skills such as firewall management and vulnerability assessment, resulting in a 0% skills match."
+        },
+        {
+            "jobId": "e9ccac92-b248-452a-b7c0-fc54edf4ca67",
+            "jobTitle": "Data Engineer",
+            "company": "Mutual of Omaha Insurance",
+            "matchScore": 0.6783894387847521,
+            "matchingFactors": {
+                "skillsMatch": 0,
+                "experienceMatch": 1,
+                "educationMatch": 0.8999999999999999,
+                "semanticSimilarity": 0.8135577551390084
+            },
+            "matchedSkills": [],
+            "missingSkills": [
+                "analytical abilities",
+                "analytical skills",
+                "communication & collaboration",
+                "etl development",
+                "data processing",
+                "hdfs",
+                "nosql",
+                "big data technologies",
+                "spark",
+                "distributed computing"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Data Engineer role, possessing extensive professional experience that aligns with the required years. While the candidate's education in Computer Science from Stanford is highly relevant and contributes significantly to the match, there is a notable skills gap. The candidate's current skillset does not directly align with the core technical requirements of a Data Engineer, such as Big Data Technologies, Data Processing, and Data Warehousing, which impacts the overall skills match."
+        },
+        {
+            "jobId": "184c748f-6ec8-4737-a9f6-adf5a16af319",
+            "jobTitle": "Software Engineer (DevOps)",
+            "company": "China Mobile",
+            "matchScore": 0.6342651647767328,
+            "matchingFactors": {
+                "skillsMatch": 0.16,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8770606591069312
+            },
+            "matchedSkills": [
+                "Docker",
+                "Kubernetes",
+                "AWS",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "monitoring",
+                "azure",
+                "continuous integration/continuous deployment (ci/cd)",
+                "iac tools",
+                "gcp",
+                "ansible",
+                "system operations",
+                "automation and scripting",
+                "containerization technologies",
+                "troubleshooting"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior DevOps Engineer aligning well with the required 3-10 years of professional experience in a similar role. While the candidate possesses relevant skills such as Docker and Kubernetes, there are some gaps in areas like CI/CD and IaC tools, contributing to a moderate skills match. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, though it is only a partial match for the specific educational requirements of the role."
+        },
+        {
+            "jobId": "6247f19d-ea65-4334-ad37-62416a8db6dd",
+            "jobTitle": "Cloud Architect Intern",
+            "company": "Ovintiv",
+            "matchScore": 0.6317984591842618,
+            "matchingFactors": {
+                "skillsMatch": 0.2,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.827193836737047
+            },
+            "matchedSkills": [
+                "AWS",
+                "Docker",
+                "Kubernetes",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "analytical skills",
+                "written communication",
+                "microsoft azure",
+                "cloud computing platforms",
+                "cloud security principles",
+                "teamwork",
+                "compliance",
+                "collaborative team",
+                "cloud security",
+                "independent work"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Cloud Architect Intern role, with their extensive background as a Senior DevOps Engineer directly aligning with the job's requirements. While the candidate possesses relevant skills such as AWS, Docker, and Kubernetes, there are some gaps in areas like cloud security principles and specific cloud computing platforms. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a good overall fit for the position."
+        },
+        {
+            "jobId": "b0cf7009-4fe1-4a6a-aafe-31c6ed722f79",
+            "jobTitle": "Cloud Architect",
+            "company": "Aurobindo Pharma",
+            "matchScore": 0.6275799426859426,
+            "matchingFactors": {
+                "skillsMatch": 0.17391304347826086,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8364067272655097
+            },
+            "matchedSkills": [
+                "AWS",
+                "Docker",
+                "Kubernetes",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "azure",
+                "analytical skills",
+                "cloud infrastructure",
+                "microsoft azure",
+                "cloud computing platforms",
+                "cloud security principles",
+                "identity and access management",
+                "cloudformation",
+                "database services",
+                "cloud security"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Cloud Architect role, with their background as a Senior DevOps Engineer aligning well with the required years of professional experience. While the candidate possesses valuable skills in containerization and orchestration such as Docker and Kubernetes, and has experience with AWS, there are some gaps in specific cloud computing platforms and analytical skills. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, though it is only a partial match for the specific requirements of a Cloud Architect position."
+        },
+        {
+            "jobId": "77721413-e1a2-4106-a043-b790ebb34bde",
+            "jobTitle": "Data Engineer",
+            "company": "Lendlease Group",
+            "matchScore": 0.6265821933746343,
+            "matchingFactors": {
+                "skillsMatch": 0,
+                "experienceMatch": 1,
+                "educationMatch": 0.7,
+                "semanticSimilarity": 0.8063287734985374
+            },
+            "matchedSkills": [],
+            "missingSkills": [
+                "analytical abilities",
+                "hive",
+                "data processing",
+                "hdfs",
+                "etl/elt development",
+                "big data technologies",
+                "data modeling",
+                "distributed computing",
+                "spark",
+                "distributed computing principles"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Data Engineer role, possessing extensive professional experience that aligns with the job's requirements. While the candidate's educational background in Computer Science from Stanford is a good foundation, it only partially meets the specific educational needs of this data-focused position. The skills match is currently low, as the candidate's expertise in DevOps tools like Docker and Kubernetes does not directly translate to the required Big Data technologies, data processing, and data modeling skills for this role."
+        },
+        {
+            "jobId": "f8a80882-7b00-4745-a51c-266c0debb96e",
+            "jobTitle": "Network Administrator",
+            "company": "Reliance Industries Limited",
+            "matchScore": 0.6194045568505928,
+            "matchingFactors": {
+                "skillsMatch": 0.16666666666666666,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8109515607357047
+            },
+            "matchedSkills": [
+                "Cloud Computing",
+                "Cloud Computing",
+                "AWS",
+                "Communication",
+                "Collaboration",
+                "Collaboration"
+            ],
+            "missingSkills": [
+                "system administration",
+                "it security",
+                "azure",
+                "strong problem-solving abilities",
+                "recovery",
+                "advanced troubleshooting",
+                "it security best practices",
+                "active directory",
+                "backup and recovery",
+                "strong technical knowledge"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Network Administrator role, possessing the required years of professional experience. While the candidate's skills in Cloud Computing, Communication, and Collaboration align with the job requirements, there are significant gaps in core system administration and IT security expertise. The candidate's educational background in Computer Science is a partial match for the role's requirements."
+        },
+        {
+            "jobId": "842c4605-bf94-4431-9003-2398412f37a6",
+            "jobTitle": "Data Engineer (Data Architect Intern)",
+            "company": "Equitable Holdings",
+            "matchScore": 0.6176820078880386,
+            "matchingFactors": {
+                "skillsMatch": 0.16666666666666666,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8040613648854877
+            },
+            "matchedSkills": [
+                "problem-solving",
+                "Communication",
+                "communication",
+                "collaboration"
+            ],
+            "missingSkills": [
+                "technical teams",
+                "analytical skills",
+                "non-technical teams",
+                "database management",
+                "data architecture",
+                "nosql",
+                "data modeling",
+                "principles",
+                "data modeling tools",
+                "sql"
+            ],
+            "explanation": "This candidate presents a strong experience match, aligning perfectly with the required years of experience for the Data Engineer role. While the candidate possesses excellent communication skills, which are a valuable asset, there is a significant skills gap in core data engineering competencies such as data architecture design and database management systems. The candidate's education is partially aligned with the role's requirements."
+        }
+    ]
+}

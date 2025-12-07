@@ -1,0 +1,316 @@
+{
+    "candidateId": "resume_John Doe",
+    "candidateName": "John Doe",
+    "recommendations": [
+        {
+            "jobId": "d7a69ccb-c4f5-4473-a9c4-9f2cba28494c",
+            "jobTitle": "Java Developer (Intern)",
+            "company": "Go-Ahead Group",
+            "matchScore": 0.7566385101295408,
+            "matchingFactors": {
+                "skillsMatch": 0.2,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8265540405181628
+            },
+            "matchedSkills": [
+                "Java",
+                "Spring Boot",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "sdlc",
+                "analytical skills",
+                "java frameworks",
+                "code",
+                "programming",
+                "debugging",
+                "software development lifecycle",
+                "ood",
+                "object-oriented design",
+                "spring"
+            ],
+            "explanation": "This candidate presents a strong experience match, with extensive professional background in software development aligning well with the role's requirements. The candidate's education is also a perfect fit, holding a relevant degree from a reputable institution. While the candidate possesses some foundational skills like Java and Spring Boot, there are notable gaps in other required areas such as SDLC and analytical skills, which impacts the overall skills match."
+        },
+        {
+            "jobId": "3e731dae-129c-4fde-aa8e-68f0af2ef706",
+            "jobTitle": "Software Architect (Cloud Architect Internship)",
+            "company": "DCP Midstream",
+            "matchScore": 0.7451971272627519,
+            "matchingFactors": {
+                "skillsMatch": 0.16666666666666666,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8141218423843406
+            },
+            "matchedSkills": [
+                "AWS",
+                "Docker",
+                "Kubernetes",
+                "Communication"
+            ],
+            "missingSkills": [
+                "cross-functional teams",
+                "written communication",
+                "ci/cd pipelines",
+                "strategic problem-solving",
+                "microsoft azure",
+                "cloud computing platforms",
+                "cloud security principles",
+                "collaboration",
+                "ci/cd & devops",
+                "cloud security"
+            ],
+            "explanation": "This candidate presents a strong experience match, with their background as a Senior Back-End Developer aligning well with the required years of professional experience. The candidate also demonstrates a perfect education match, holding a Bachelor of Science in Computer Science. While the skills match is currently lower, indicating areas for development such as CI/CD pipelines and specific cloud platforms like Azure, the candidate does possess foundational skills in AWS, Docker, and Kubernetes, along with strong communication abilities."
+        },
+        {
+            "jobId": "bf671a14-61f5-4ff7-ab06-47256528c3b8",
+            "jobTitle": "Back-End Developer (API Developer)",
+            "company": "Honeywell International",
+            "matchScore": 0.728462003078313,
+            "matchingFactors": {
+                "skillsMatch": 0.058823529411764705,
+                "experienceMatch": 1,
+                "educationMatch": 1,
+                "semanticSimilarity": 0.8550244829014875
+            },
+            "matchedSkills": [
+                "Communication"
+            ],
+            "missingSkills": [
+                "analytical skills",
+                "swagger",
+                "collaboration abilities",
+                "api design",
+                "restful api",
+                "api security",
+                "api documentation tools",
+                "api design principles",
+                "problem solving",
+                "api security protocols"
+            ],
+            "explanation": "This candidate presents a strong match due to their extensive experience and educational background, both aligning perfectly with the job requirements. While the candidate possesses strong communication skills, there is a notable gap in specific technical skills such as API design and RESTful API development, which are crucial for this role. The candidate's overall fit is high, primarily driven by their experience and education, but the skills match requires further development."
+        },
+        {
+            "jobId": "fed9ea59-8b7a-41e6-a947-b92d8b6eb75a",
+            "jobTitle": "Back-End Developer",
+            "company": "Glenmark Pharmaceuticals",
+            "matchScore": 0.6573373580269771,
+            "matchingFactors": {
+                "skillsMatch": 0.25,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8793494321079085
+            },
+            "matchedSkills": [
+                "Java",
+                "Python",
+                "Problem-solving",
+                "Communication"
+            ],
+            "missingSkills": [
+                "server-side programming languages",
+                "analytical abilities",
+                "team environment",
+                "sql",
+                "apis",
+                "collaboration",
+                "api development",
+                "nosql",
+                "consuming",
+                "database management systems"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Back-End Developer role, with extensive professional history aligning well with the required years of experience. The candidate also demonstrates a good education match, holding a relevant degree. While specific skills like Java, Python, problem-solving, and communication are a good starting point, there are identified gaps in server-side programming languages, database management systems, and API development that would need to be addressed."
+        },
+        {
+            "jobId": "2e309050-d14d-46b7-bed8-0f0ece406d80",
+            "jobTitle": "Backend Web Developer",
+            "company": "AGCO",
+            "matchScore": 0.6550551278150477,
+            "matchingFactors": {
+                "skillsMatch": 0.2631578947368421,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8570626165233489
+            },
+            "matchedSkills": [
+                "Python",
+                "Git",
+                "problem-solving",
+                "Communication",
+                "teamwork"
+            ],
+            "missingSkills": [
+                "server-side programming languages",
+                "mongodb",
+                "node.js",
+                "analytical skills",
+                "restful apis",
+                "version control systems",
+                "time management",
+                "sql",
+                "database management systems",
+                "nosql"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Backend Web Developer role, with their background as a Senior Back-End Developer aligning well with the required years of professional experience. While the candidate's education is a partial match, their skills present a mixed picture; they possess valuable aligned skills such as Python, Git, problem-solving, Communication, and teamwork, but there are notable gaps in other required areas like server-side programming languages and API design. The overall fit score reflects the significant strength in experience, balanced by the identified skill gaps."
+        },
+        {
+            "jobId": "77bac9eb-5f9f-4100-b6d4-5ea02573095a",
+            "jobTitle": "Java Developer (Intern)",
+            "company": "Exelon",
+            "matchScore": 0.6526991876352541,
+            "matchingFactors": {
+                "skillsMatch": 0.2631578947368421,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8476388558041748
+            },
+            "matchedSkills": [
+                "Java",
+                "Java",
+                "Git",
+                "problem-solving",
+                "Communication",
+                "communication",
+                "Teamwork",
+                "teamwork"
+            ],
+            "missingSkills": [
+                "java ee",
+                "database integration",
+                "version control",
+                "analytical abilities",
+                "analytical skills",
+                "restful apis",
+                "backend development",
+                "version control systems",
+                "sql",
+                "application performance optimization"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Java Developer (Intern) role, aligning with the 0-12 years of experience requirement due to their senior-level background. While the skills match is moderate at 26%, specific skills like Java, Git, communication, and teamwork are identified as aligned. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a 50% education match."
+        },
+        {
+            "jobId": "4a8286a7-8693-49a5-b7a7-593c08d8ad05",
+            "jobTitle": "Agile Project Manager",
+            "company": "Hindalco Industries",
+            "matchScore": 0.6525909156355405,
+            "matchingFactors": {
+                "skillsMatch": 0.3076923076923077,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8026713548498543
+            },
+            "matchedSkills": [
+                "Scrum",
+                "Kanban",
+                "Communication",
+                "Problem-solving"
+            ],
+            "missingSkills": [
+                "team collaboration",
+                "confluence",
+                "coaching",
+                "agile project management tools",
+                "jira",
+                "agile methodologies",
+                "leadership",
+                "interpersonal skills",
+                "conflict-resolution"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Agile Project Manager role, with their background aligning well with the required years in project management. While the candidate demonstrates proficiency in key areas such as Scrum, Kanban, communication, and problem-solving, there is a notable skills gap in specific Agile project management tools and team collaboration techniques. The candidate's educational background in Computer Science provides a foundational understanding, contributing to a moderate education match."
+        },
+        {
+            "jobId": "7c5dbe10-8ce0-45bb-a35f-aaf618923526",
+            "jobTitle": "Database Developer",
+            "company": "News Corp.",
+            "matchScore": 0.6299439739239849,
+            "matchingFactors": {
+                "skillsMatch": 0.21052631578947367,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8092495799064658
+            },
+            "matchedSkills": [
+                "Programming Languages",
+                "Java",
+                "Python",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "database querying tools",
+                "data privacy regulations",
+                "analytical abilities",
+                "analytical skills",
+                "data security",
+                "sql",
+                "automation",
+                "data security best practices",
+                "communication and collaboration",
+                "communication skills"
+            ],
+            "explanation": "This candidate presents a strong experience match, with 100% alignment to the required years of professional experience in database development or a similar role. While the candidate possesses relevant programming language skills, the skills match is only 21% due to gaps in specific database querying tools, data privacy regulations, and analytical skills. The education match is 50%, as the candidate holds a relevant degree but the specific focus may not be a direct match for database development."
+        },
+        {
+            "jobId": "184c748f-6ec8-4737-a9f6-adf5a16af319",
+            "jobTitle": "Software Engineer (DevOps)",
+            "company": "China Mobile",
+            "matchScore": 0.6284012479542943,
+            "matchingFactors": {
+                "skillsMatch": 0.2,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.8136049918171774
+            },
+            "matchedSkills": [
+                "Python",
+                "Docker",
+                "Kubernetes",
+                "AWS",
+                "problem-solving"
+            ],
+            "missingSkills": [
+                "monitoring",
+                "azure",
+                "continuous integration/continuous deployment (ci/cd)",
+                "iac tools",
+                "gcp",
+                "ansible",
+                "system operations",
+                "automation and scripting",
+                "containerization technologies",
+                "troubleshooting"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Software Engineer (DevOps) role, with their background as a Senior Back-End Developer aligning well with the required years of professional experience. While the candidate possesses valuable skills such as Python, Docker, Kubernetes, AWS, and problem-solving, there are some identified gaps in areas like CI/CD, IaC tools, and cloud platforms beyond AWS, which impacts the skills match score. The candidate's Bachelor of Science in Computer Science from Stanford University provides a solid educational foundation, contributing to a moderate education match."
+        },
+        {
+            "jobId": "2ab12521-6d75-4471-9cdf-a0801db28aa5",
+            "jobTitle": "Database Administrator",
+            "company": "Diageo",
+            "matchScore": 0.6271736554153667,
+            "matchingFactors": {
+                "skillsMatch": 0.2,
+                "experienceMatch": 1,
+                "educationMatch": 0.5,
+                "semanticSimilarity": 0.808694621661467
+            },
+            "matchedSkills": [
+                "Programming Languages",
+                "Java",
+                "Python"
+            ],
+            "missingSkills": [
+                "data privacy regulations",
+                "analytical and problem-solving",
+                "database design and development",
+                "data security and privacy",
+                "sql",
+                "automation",
+                "data modeling techniques",
+                "data security best practices",
+                "scripting",
+                "data modeling"
+            ],
+            "explanation": "This candidate presents a strong experience match for the Database Administrator role, with their extensive background aligning perfectly with the required years of professional experience. While the candidate possesses relevant programming language skills, there is a notable skills gap in core database administration competencies such as SQL, data modeling, and data security. The candidate's computer science education provides a foundational understanding, contributing to a moderate education match."
+        }
+    ]
+}
